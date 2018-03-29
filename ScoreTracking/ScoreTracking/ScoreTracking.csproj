@@ -51,6 +51,10 @@
     <Compile Include="frm_Menu.Designer.cs">
       <DependentUpon>frm_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Partida.cs" />
+    <Compile Include="PartidaPaladins.cs" />
+    <Compile Include="PartidaHS.cs" />
+    <Compile Include="Personagem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
