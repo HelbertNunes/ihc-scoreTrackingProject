@@ -6,10 +6,22 @@ using System.Threading.Tasks;
 
 namespace ScoreTracking
 {
-    class Partida
+    public class Partida
     {
-        private bool vencedor { get; set; }
-        private double duracao { get; set; }
-        private bool modoDeJogo { get; set; }
-    }
+        protected int Ganhador { get; set; }
+        protected TimeSpan Duracao { get; set; }
+        protected bool ModoDeJogo { get; set; }        
+        
+        protected enum ModoJogo
+        {
+            Normal,
+            Ranqueado
+        };
+
+        protected enum Vencedor
+        {
+            Aliado,
+            Inimigo
+        };
+    }        
 }

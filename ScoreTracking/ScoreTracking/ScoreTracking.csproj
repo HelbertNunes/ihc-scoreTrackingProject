@@ -45,18 +45,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Champion_Paladins.cs" />
+    <Compile Include="frm_HS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_HS.Designer.cs">
+      <DependentUpon>frm_HS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_LoL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_LoL.Designer.cs">
+      <DependentUpon>frm_LoL.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_Menu.Designer.cs">
       <DependentUpon>frm_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Paladins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Paladins.Designer.cs">
+      <DependentUpon>frm_Paladins.cs</DependentUpon>
+    </Compile>
     <Compile Include="Partida.cs" />
     <Compile Include="PartidaPaladins.cs" />
     <Compile Include="PartidaHS.cs" />
-    <Compile Include="Personagem.cs" />
+    <Compile Include="Champion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_HS.resx">
+      <DependentUpon>frm_HS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_LoL.resx">
+      <DependentUpon>frm_LoL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Menu.resx">
+      <DependentUpon>frm_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Paladins.resx">
+      <DependentUpon>frm_Paladins.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -65,6 +96,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +110,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\League_of_Legends_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1393ff58b34cbdfbe28ee8f2c7380508.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qJY7LuHX_400x400.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

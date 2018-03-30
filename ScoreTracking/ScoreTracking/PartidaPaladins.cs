@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace ScoreTracking
 {
-    class PartidaPaladins : Partida
+    public class PartidaPaladins : Partida
     {
-        private string mapa { get; set; }
-        private int baixas { get; set; }
-        private string mortes { get; set; }
-        private long cura { get; set; }
-        private int assistencias { get; set; }
-        private int dano { get; set; }
+        private string Mapa { get; set; }       
+        private int pontosAliado { get; set; }
+        private int pontosInimigo { get; set; }
     }
 }

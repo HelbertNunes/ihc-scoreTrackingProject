@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,18 @@ namespace ScoreTracking
         public frm_Menu()
         {
             InitializeComponent();
+        }
+
+        private void btn_Paladins_Click(object sender, EventArgs e)
+        {
+            Thread thread = new Thread(() => {
+                frm_Paladins frm_Paladins = new frm_Paladins();
+                frm_Paladins.Show();
+                Application.Run(frm_Paladins);
+            });
+
+            thread.Start();
+            this.Close();
         }
     }
 }

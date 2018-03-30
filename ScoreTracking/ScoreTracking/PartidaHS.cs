@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ScoreTracking
 {
-    class PartidaHS : Partida
+    public class PartidaHS : Partida
     {
         private string deckOponente { get; set; }
         private string deckUsuario { get; set; }
