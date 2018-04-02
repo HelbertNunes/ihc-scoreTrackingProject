@@ -12,9 +12,18 @@ namespace ScoreTracking
 {
     public partial class frm_HS : Form
     {
-        public frm_HS()
+        Form formMenu;
+
+        public frm_HS(Form form)
         {
             InitializeComponent();
+            formMenu = form;
+        }
+
+        private void bt_Voltar_Click(object sender, EventArgs e)
+        {
+            Hide();
+            formMenu.Show();
         }
     }
 }

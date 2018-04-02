@@ -1,0 +1,20 @@
+Rexxar:Caçador
+Alleria:Caçador
+Arthas:Paladino
+Uther:Paladino
+Liadrin:Paladino
+Gul'Dan:Bruxo
+Nemsis:Bruxo
+Medivh:Mago
+Jaina:Mago
+Hadgar:Mago
+Garrosh:Guerreiro
+Rei Magni:Guerreiro
+Thrall:Xamã
+Morgl:Xamã
+Valeera:Ladino
+Maiev:Ladino
+Malfurion:Druida
+Anduin:Sacerdote
+Tyrande:Sacerdote
+

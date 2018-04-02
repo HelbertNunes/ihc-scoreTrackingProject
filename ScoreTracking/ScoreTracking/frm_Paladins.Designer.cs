@@ -67,6 +67,8 @@
             this.lb_enemy3_class = new System.Windows.Forms.Label();
             this.lb_enemy4_class = new System.Windows.Forms.Label();
             this.lb_enemy5_class = new System.Windows.Forms.Label();
+            this.bt_Voltar = new System.Windows.Forms.Button();
+            this.bt_Salvar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally3)).BeginInit();
@@ -426,11 +428,32 @@
             this.lb_enemy5_class.TabIndex = 37;
             this.lb_enemy5_class.Text = "-";
             // 
+            // bt_Voltar
+            // 
+            this.bt_Voltar.Location = new System.Drawing.Point(17, 710);
+            this.bt_Voltar.Name = "bt_Voltar";
+            this.bt_Voltar.Size = new System.Drawing.Size(90, 27);
+            this.bt_Voltar.TabIndex = 38;
+            this.bt_Voltar.Text = "<-   Voltar";
+            this.bt_Voltar.UseVisualStyleBackColor = true;
+            this.bt_Voltar.Click += new System.EventHandler(this.bt_Voltar_Click);
+            // 
+            // bt_Salvar
+            // 
+            this.bt_Salvar.Location = new System.Drawing.Point(840, 710);
+            this.bt_Salvar.Name = "bt_Salvar";
+            this.bt_Salvar.Size = new System.Drawing.Size(90, 27);
+            this.bt_Salvar.TabIndex = 39;
+            this.bt_Salvar.Text = "Salvar";
+            this.bt_Salvar.UseVisualStyleBackColor = true;
+            // 
             // frm_Paladins
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 749);
+            this.Controls.Add(this.bt_Salvar);
+            this.Controls.Add(this.bt_Voltar);
             this.Controls.Add(this.lb_enemy5_class);
             this.Controls.Add(this.lb_enemy4_class);
             this.Controls.Add(this.lb_enemy3_class);
@@ -529,5 +552,7 @@
         private System.Windows.Forms.Label lb_enemy3_class;
         private System.Windows.Forms.Label lb_enemy4_class;
         private System.Windows.Forms.Label lb_enemy5_class;
+        private System.Windows.Forms.Button bt_Voltar;
+        private System.Windows.Forms.Button bt_Salvar;
     }
 }

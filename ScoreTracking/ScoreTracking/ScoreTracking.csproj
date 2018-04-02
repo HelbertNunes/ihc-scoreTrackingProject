@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>ScoreTracking</RootNamespace>
     <AssemblyName>ScoreTracking</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,12 +53,6 @@
     <Compile Include="frm_HS.Designer.cs">
       <DependentUpon>frm_HS.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_LoL.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_LoL.Designer.cs">
-      <DependentUpon>frm_LoL.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,9 +73,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_HS.resx">
       <DependentUpon>frm_HS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_LoL.resx">
-      <DependentUpon>frm_LoL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Menu.resx">
       <DependentUpon>frm_Menu.cs</DependentUpon>
@@ -158,6 +150,9 @@
     <Content Include="Resources\Images\Paladins\Willo.png" />
     <Content Include="Resources\Images\Paladins\Ying.png" />
     <Content Include="Resources\Images\Paladins\Zhin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Database\HearthStone\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

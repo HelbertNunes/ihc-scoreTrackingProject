@@ -16,11 +16,13 @@ namespace ScoreTracking
         private List<Champion_Paladins> champions = new List<Champion_Paladins>();
         private List<string> mapas = new List<string>();
         private Control.ControlCollection form_Controls;
+        Form formMenu;
 
-        public frm_Paladins()
+        public frm_Paladins(Form form)
         {
             InitializeComponent();
             PreencheComboBoxes();
+            formMenu = form;
         }
 
         private void PreencheComboBoxes()
@@ -76,6 +78,12 @@ namespace ScoreTracking
                     mapas.Add(line);
                 }
             }            
+        }
+
+        private void bt_Voltar_Click(object sender, EventArgs e)
+        {
+            Hide();
+            formMenu.Show();
         }
     }
 }
