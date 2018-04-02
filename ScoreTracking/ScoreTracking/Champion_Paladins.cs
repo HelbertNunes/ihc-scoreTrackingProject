@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Drawing;
+using System.Resources;
+using System.Reflection;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,16 +12,17 @@ namespace ScoreTracking
 {
     public class Champion_Paladins : Champion
     {
-        private const string IMAGE_PATH = @".\Images\Paladins\";
+        private const string IMAGE_PATH = "ScoreTracking.";
 
         public Champion_Paladins(string nome, string classe) 
             : base(nome, classe)
         {
         }
 
-        public override string GetImage()
+        public override Bitmap GetImage()
         {
-            return IMAGE_PATH + this.Nome + ".png";
+            ResourceManager rm = Properties.Resources.ResourceManager;            
+            return (rm.GetObject(this.Nome) as Bitmap);
         }
     }
 }

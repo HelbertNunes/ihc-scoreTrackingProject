@@ -120,5 +120,44 @@
   <ItemGroup>
     <None Include="Resources\qJY7LuHX_400x400.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Database\Paladins\Champions.txt" />
+    <None Include="Resources\Database\Paladins\champions_paladins.txt" />
+    <Content Include="Resources\Images\Paladins\Androxus.png" />
+    <Content Include="Resources\Images\Paladins\Ash.png" />
+    <Content Include="Resources\Images\Paladins\Barik.png" />
+    <Content Include="Resources\Images\Paladins\BombKing.png" />
+    <Content Include="Resources\Images\Paladins\Buck.png" />
+    <Content Include="Resources\Images\Paladins\Cassie.png" />
+    <Content Include="Resources\Images\Paladins\Drogoz.png" />
+    <Content Include="Resources\Images\Paladins\Evie.png" />
+    <Content Include="Resources\Images\Paladins\Fernando.png" />
+    <Content Include="Resources\Images\Paladins\Grohk.png" />
+    <Content Include="Resources\Images\Paladins\Grover.png" />
+    <Content Include="Resources\Images\Paladins\Inara.png" />
+    <Content Include="Resources\Images\Paladins\Jenos.png" />
+    <Content Include="Resources\Images\Paladins\Kinessa.png" />
+    <Content Include="Resources\Images\Paladins\Lex.png" />
+    <Content Include="Resources\Images\Paladins\Lian.png" />
+    <Content Include="Resources\Images\Paladins\Maeve.png" />
+    <Content Include="Resources\Images\Paladins\Makoa.png" />
+    <Content Include="Resources\Images\Paladins\Mal%27Damba.png" />
+    <Content Include="Resources\Images\Paladins\Moji.png" />
+    <Content Include="Resources\Images\Paladins\Pip.png" />
+    <Content Include="Resources\Images\Paladins\Ruckus.png" />
+    <Content Include="Resources\Images\Paladins\Seris.png" />
+    <Content Include="Resources\Images\Paladins\ShaLin.png" />
+    <Content Include="Resources\Images\Paladins\Skye.png" />
+    <Content Include="Resources\Images\Paladins\Strix.png" />
+    <Content Include="Resources\Images\Paladins\Talus.png" />
+    <Content Include="Resources\Images\Paladins\Terminus.png" />
+    <Content Include="Resources\Images\Paladins\Torvald.png" />
+    <Content Include="Resources\Images\Paladins\Tyra.png" />
+    <Content Include="Resources\Images\Paladins\Viktor.png" />
+    <Content Include="Resources\Images\Paladins\Vivian.png" />
+    <Content Include="Resources\Images\Paladins\Willo.png" />
+    <Content Include="Resources\Images\Paladins\Ying.png" />
+    <Content Include="Resources\Images\Paladins\Zhin.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
