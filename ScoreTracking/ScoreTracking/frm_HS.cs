@@ -22,7 +22,7 @@ namespace ScoreTracking
 
         private void bt_Voltar_Click(object sender, EventArgs e)
         {
-            Hide();
+            Close();
             formMenu.Show();
         }
     }

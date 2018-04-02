@@ -113,8 +113,17 @@
     <None Include="Resources\qJY7LuHX_400x400.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Database\Paladins\Champions.txt" />
     <None Include="Resources\Database\Paladins\champions_paladins.txt" />
+    <None Include="Resources\Images\HS\Bruxo.png" />
+    <None Include="Resources\Images\HS\Caçador.png" />
+    <None Include="Resources\Images\HS\Druida.png" />
+    <None Include="Resources\Images\HS\Guerreiro.png" />
+    <None Include="Resources\Images\HS\Ladino.png" />
+    <None Include="Resources\Images\HS\Mago.png" />
+    <None Include="Resources\Images\HS\Paladino.png" />
+    <None Include="Resources\Images\HS\Sacerdote.png" />
+    <None Include="Resources\Images\HS\Xama.png" />
+    <None Include="Resources\Database\HS\classes.txt" />
     <Content Include="Resources\Images\Paladins\Androxus.png" />
     <Content Include="Resources\Images\Paladins\Ash.png" />
     <Content Include="Resources\Images\Paladins\Barik.png" />
@@ -151,8 +160,6 @@
     <Content Include="Resources\Images\Paladins\Ying.png" />
     <Content Include="Resources\Images\Paladins\Zhin.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\Database\HearthStone\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

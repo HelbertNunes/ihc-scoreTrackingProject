@@ -1,0 +1,9 @@
+Gul'dan:Bruxo
+Rexxar:Caçador
+Malfurion:Druida
+Garrosh:Guerreiro
+Valeera:Ladino
+Jaina:Mago
+Uther:Paladino
+Anduin:Sacerdote
+Thrall:Xama
