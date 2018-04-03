@@ -32,20 +32,35 @@ namespace ScoreTracking
             form_Controls = this.Controls;
             List<ComboBox> comboBoxes = form_Controls.OfType<ComboBox>().ToList().Where(x => !x.Name.Contains("mapa")).ToList();
             List<PictureBox> pictureBoxes = form_Controls.OfType<PictureBox>().ToList();
-            
+
+            int cont_ally = 0, cont_enemy = 0;
+
             for (int i = 0; i < comboBoxes.Count; i++)
             {
                 Champion_Paladins[] championsTemp = new Champion_Paladins[champions.Count];
-                champions.CopyTo(championsTemp);
+                champions.CopyTo(championsTemp);                
                 comboBoxes[i].DataSource = championsTemp;                
                 comboBoxes[i].DisplayMember = "Nome";
-                comboBoxes[i].SelectedIndexChanged += new EventHandler(AtualizaDados);
 
                 PictureBox pictureBox = pictureBoxes.Where(x => x.Name.Contains(comboBoxes[i].Name.Substring(3))).ToArray()[0];
-                pictureBox.Image = champions[0].GetImage();
-
                 Label label = form_Controls.OfType<Label>().ToList().Where(x => x.Name.Contains(comboBoxes[i].Name.Substring(3))).ToList()[0];
-                label.Text = champions[0].Classe;
+
+                if (comboBoxes[i].Name.Contains("ally"))
+                {
+                    comboBoxes[i].SelectedItem = champions[cont_ally];
+                    pictureBox.Image = champions[cont_ally].GetImage();
+                    label.Text = champions[cont_ally].Classe;
+                    cont_ally++;
+                }
+                else
+                {
+                    comboBoxes[i].SelectedItem = champions[cont_enemy];
+                    pictureBox.Image = champions[cont_enemy].GetImage();
+                    label.Text = champions[cont_enemy].Classe;
+                    cont_enemy++;
+                }
+
+                comboBoxes[i].SelectedIndexChanged += new EventHandler(AtualizaDados);                                
             }
         }
 
@@ -82,8 +97,19 @@ namespace ScoreTracking
 
         private void bt_Voltar_Click(object sender, EventArgs e)
         {
-            Close();
+            Hide();
             formMenu.Show();
+        }
+
+        private void frm_Paladins_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Hide();
+            formMenu.Show();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

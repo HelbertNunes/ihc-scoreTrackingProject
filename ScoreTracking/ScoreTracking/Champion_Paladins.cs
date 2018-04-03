@@ -11,9 +11,7 @@ using System.Threading.Tasks;
 namespace ScoreTracking
 {
     public class Champion_Paladins : Champion
-    {
-        private const string IMAGE_PATH = "ScoreTracking.";
-
+    {        
         public Champion_Paladins(string nome, string classe) 
             : base(nome, classe)
         {
@@ -22,7 +20,7 @@ namespace ScoreTracking
         public override Bitmap GetImage()
         {
             ResourceManager rm = Properties.Resources.ResourceManager;            
-            return (rm.GetObject(this.Nome) as Bitmap);
+            return (rm.GetObject(this.Nome.Contains("'") ? this.Nome.Replace("'","_") : this.Nome )as Bitmap);
         }
     }
 }

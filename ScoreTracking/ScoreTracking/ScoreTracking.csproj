@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Champion_HS.cs" />
     <Compile Include="Champion_Paladins.cs" />
     <Compile Include="frm_HS.cs">
       <SubType>Form</SubType>

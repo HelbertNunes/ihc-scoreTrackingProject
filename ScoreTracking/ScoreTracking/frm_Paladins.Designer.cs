@@ -69,6 +69,9 @@
             this.lb_enemy5_class = new System.Windows.Forms.Label();
             this.bt_Voltar = new System.Windows.Forms.Button();
             this.bt_Salvar = new System.Windows.Forms.Button();
+            this.mn_menu = new System.Windows.Forms.MenuStrip();
+            this.estatísticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally3)).BeginInit();
@@ -79,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_enemy3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_enemy2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_enemy1)).BeginInit();
+            this.mn_menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // pb_ally1
@@ -434,7 +438,7 @@
             this.bt_Voltar.Name = "bt_Voltar";
             this.bt_Voltar.Size = new System.Drawing.Size(90, 27);
             this.bt_Voltar.TabIndex = 38;
-            this.bt_Voltar.Text = "<-   Voltar";
+            this.bt_Voltar.Text = "<-   &Voltar";
             this.bt_Voltar.UseVisualStyleBackColor = true;
             this.bt_Voltar.Click += new System.EventHandler(this.bt_Voltar_Click);
             // 
@@ -444,8 +448,32 @@
             this.bt_Salvar.Name = "bt_Salvar";
             this.bt_Salvar.Size = new System.Drawing.Size(90, 27);
             this.bt_Salvar.TabIndex = 39;
-            this.bt_Salvar.Text = "Salvar";
+            this.bt_Salvar.Text = "&Salvar";
             this.bt_Salvar.UseVisualStyleBackColor = true;
+            // 
+            // mn_menu
+            // 
+            this.mn_menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.estatísticaToolStripMenuItem,
+            this.sairToolStripMenuItem});
+            this.mn_menu.Location = new System.Drawing.Point(0, 0);
+            this.mn_menu.Name = "mn_menu";
+            this.mn_menu.Size = new System.Drawing.Size(942, 24);
+            this.mn_menu.TabIndex = 40;
+            this.mn_menu.Text = "menuStrip1";
+            // 
+            // estatísticaToolStripMenuItem
+            // 
+            this.estatísticaToolStripMenuItem.Name = "estatísticaToolStripMenuItem";
+            this.estatísticaToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.estatísticaToolStripMenuItem.Text = "&Estatística";
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // frm_Paladins
             // 
@@ -492,11 +520,14 @@
             this.Controls.Add(this.pb_ally2);
             this.Controls.Add(this.lb_ally);
             this.Controls.Add(this.pb_ally1);
+            this.Controls.Add(this.mn_menu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.mn_menu;
             this.MaximizeBox = false;
             this.Name = "frm_Paladins";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Paladins";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Paladins_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally3)).EndInit();
@@ -507,6 +538,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_enemy3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_enemy2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_enemy1)).EndInit();
+            this.mn_menu.ResumeLayout(false);
+            this.mn_menu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -554,5 +587,8 @@
         private System.Windows.Forms.Label lb_enemy5_class;
         private System.Windows.Forms.Button bt_Voltar;
         private System.Windows.Forms.Button bt_Salvar;
+        private System.Windows.Forms.MenuStrip mn_menu;
+        private System.Windows.Forms.ToolStripMenuItem estatísticaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
     }
 }
