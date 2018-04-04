@@ -73,6 +73,16 @@ namespace ScoreTracking.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _900px_Battlefield___The_Grand_Tournament {
+            get {
+                object obj = ResourceManager.GetObject("900px-Battlefield_-_The_Grand_Tournament", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Androxus {
             get {
                 object obj = ResourceManager.GetObject("Androxus", resourceCulture);

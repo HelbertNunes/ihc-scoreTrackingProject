@@ -58,7 +58,7 @@
             this.lb_ally.AutoSize = true;
             this.lb_ally.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_ally.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lb_ally.Location = new System.Drawing.Point(141, 22);
+            this.lb_ally.Location = new System.Drawing.Point(408, 494);
             this.lb_ally.Name = "lb_ally";
             this.lb_ally.Size = new System.Drawing.Size(54, 20);
             this.lb_ally.TabIndex = 2;
@@ -69,7 +69,7 @@
             this.lb_enemy.AutoSize = true;
             this.lb_enemy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_enemy.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lb_enemy.Location = new System.Drawing.Point(426, 22);
+            this.lb_enemy.Location = new System.Drawing.Point(409, 28);
             this.lb_enemy.Name = "lb_enemy";
             this.lb_enemy.Size = new System.Drawing.Size(96, 20);
             this.lb_enemy.TabIndex = 3;
@@ -79,7 +79,7 @@
             // 
             this.cb_ally_hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_ally_hero.FormattingEnabled = true;
-            this.cb_ally_hero.Location = new System.Drawing.Point(12, 96);
+            this.cb_ally_hero.Location = new System.Drawing.Point(269, 388);
             this.cb_ally_hero.Name = "cb_ally_hero";
             this.cb_ally_hero.Size = new System.Drawing.Size(127, 21);
             this.cb_ally_hero.TabIndex = 7;
@@ -91,25 +91,27 @@
             this.cb_Vencedor.Items.AddRange(new object[] {
             "Você",
             "Oponente"});
-            this.cb_Vencedor.Location = new System.Drawing.Point(377, 297);
+            this.cb_Vencedor.Location = new System.Drawing.Point(485, 275);
             this.cb_Vencedor.Name = "cb_Vencedor";
             this.cb_Vencedor.Size = new System.Drawing.Size(100, 21);
             this.cb_Vencedor.TabIndex = 8;
             // 
             // pb_ally
             // 
-            this.pb_ally.Location = new System.Drawing.Point(145, 58);
+            this.pb_ally.BackColor = System.Drawing.Color.Transparent;
+            this.pb_ally.Location = new System.Drawing.Point(404, 365);
             this.pb_ally.Name = "pb_ally";
-            this.pb_ally.Size = new System.Drawing.Size(179, 205);
+            this.pb_ally.Size = new System.Drawing.Size(104, 126);
             this.pb_ally.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_ally.TabIndex = 9;
             this.pb_ally.TabStop = false;
             // 
             // pb_enemy
             // 
-            this.pb_enemy.Location = new System.Drawing.Point(387, 58);
+            this.pb_enemy.BackColor = System.Drawing.Color.Transparent;
+            this.pb_enemy.Location = new System.Drawing.Point(405, 51);
             this.pb_enemy.Name = "pb_enemy";
-            this.pb_enemy.Size = new System.Drawing.Size(166, 205);
+            this.pb_enemy.Size = new System.Drawing.Size(104, 126);
             this.pb_enemy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_enemy.TabIndex = 10;
             this.pb_enemy.TabStop = false;
@@ -119,7 +121,7 @@
             this.lb_Tempo.AutoSize = true;
             this.lb_Tempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Tempo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lb_Tempo.Location = new System.Drawing.Point(202, 269);
+            this.lb_Tempo.Location = new System.Drawing.Point(310, 247);
             this.lb_Tempo.Name = "lb_Tempo";
             this.lb_Tempo.Size = new System.Drawing.Size(169, 20);
             this.lb_Tempo.TabIndex = 11;
@@ -130,7 +132,7 @@
             this.lb_Vencedor.AutoSize = true;
             this.lb_Vencedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Vencedor.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lb_Vencedor.Location = new System.Drawing.Point(267, 295);
+            this.lb_Vencedor.Location = new System.Drawing.Point(375, 273);
             this.lb_Vencedor.Name = "lb_Vencedor";
             this.lb_Vencedor.Size = new System.Drawing.Size(104, 20);
             this.lb_Vencedor.TabIndex = 12;
@@ -138,7 +140,7 @@
             // 
             // bt_Voltar
             // 
-            this.bt_Voltar.Location = new System.Drawing.Point(12, 344);
+            this.bt_Voltar.Location = new System.Drawing.Point(12, 499);
             this.bt_Voltar.Name = "bt_Voltar";
             this.bt_Voltar.Size = new System.Drawing.Size(90, 27);
             this.bt_Voltar.TabIndex = 13;
@@ -150,7 +152,7 @@
             // 
             this.cb_enemy_hero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_enemy_hero.FormattingEnabled = true;
-            this.cb_enemy_hero.Location = new System.Drawing.Point(561, 96);
+            this.cb_enemy_hero.Location = new System.Drawing.Point(276, 74);
             this.cb_enemy_hero.Name = "cb_enemy_hero";
             this.cb_enemy_hero.Size = new System.Drawing.Size(127, 21);
             this.cb_enemy_hero.TabIndex = 15;
@@ -160,7 +162,7 @@
             this.lb_ally_hero.AutoSize = true;
             this.lb_ally_hero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_ally_hero.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lb_ally_hero.Location = new System.Drawing.Point(49, 73);
+            this.lb_ally_hero.Location = new System.Drawing.Point(306, 365);
             this.lb_ally_hero.Name = "lb_ally_hero";
             this.lb_ally_hero.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb_ally_hero.Size = new System.Drawing.Size(61, 20);
@@ -172,7 +174,7 @@
             this.lb_enemy_hero.AutoSize = true;
             this.lb_enemy_hero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_enemy_hero.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lb_enemy_hero.Location = new System.Drawing.Point(592, 73);
+            this.lb_enemy_hero.Location = new System.Drawing.Point(307, 51);
             this.lb_enemy_hero.Name = "lb_enemy_hero";
             this.lb_enemy_hero.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb_enemy_hero.Size = new System.Drawing.Size(61, 20);
@@ -182,7 +184,7 @@
             // cb_ally_class
             // 
             this.cb_ally_class.AutoSize = true;
-            this.cb_ally_class.Location = new System.Drawing.Point(12, 130);
+            this.cb_ally_class.Location = new System.Drawing.Point(269, 422);
             this.cb_ally_class.Name = "cb_ally_class";
             this.cb_ally_class.Size = new System.Drawing.Size(10, 13);
             this.cb_ally_class.TabIndex = 25;
@@ -191,7 +193,7 @@
             // lb_enemy_class
             // 
             this.lb_enemy_class.AutoSize = true;
-            this.lb_enemy_class.Location = new System.Drawing.Point(559, 130);
+            this.lb_enemy_class.Location = new System.Drawing.Point(274, 108);
             this.lb_enemy_class.Name = "lb_enemy_class";
             this.lb_enemy_class.Size = new System.Drawing.Size(10, 13);
             this.lb_enemy_class.TabIndex = 26;
@@ -199,7 +201,7 @@
             // 
             // bt_Salvar
             // 
-            this.bt_Salvar.Location = new System.Drawing.Point(596, 344);
+            this.bt_Salvar.Location = new System.Drawing.Point(789, 499);
             this.bt_Salvar.Name = "bt_Salvar";
             this.bt_Salvar.Size = new System.Drawing.Size(90, 27);
             this.bt_Salvar.TabIndex = 27;
@@ -208,7 +210,7 @@
             // 
             // mb_TempoPartida
             // 
-            this.mb_TempoPartida.Location = new System.Drawing.Point(377, 269);
+            this.mb_TempoPartida.Location = new System.Drawing.Point(485, 247);
             this.mb_TempoPartida.Mask = "00:00";
             this.mb_TempoPartida.Name = "mb_TempoPartida";
             this.mb_TempoPartida.Size = new System.Drawing.Size(100, 20);
@@ -222,7 +224,7 @@
             this.sairToolStripMenuItem});
             this.mn_menu.Location = new System.Drawing.Point(0, 0);
             this.mn_menu.Name = "mn_menu";
-            this.mn_menu.Size = new System.Drawing.Size(692, 24);
+            this.mn_menu.Size = new System.Drawing.Size(891, 24);
             this.mn_menu.TabIndex = 29;
             this.mn_menu.Text = "menuStrip1";
             // 
@@ -243,7 +245,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 381);
+            this.BackgroundImage = global::ScoreTracking.Properties.Resources._900px_Battlefield___The_Grand_Tournament;
+            this.ClientSize = new System.Drawing.Size(891, 538);
             this.Controls.Add(this.mb_TempoPartida);
             this.Controls.Add(this.bt_Salvar);
             this.Controls.Add(this.lb_enemy_class);
@@ -263,6 +266,7 @@
             this.Controls.Add(this.mn_menu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mn_menu;
+            this.MaximizeBox = false;
             this.Name = "frm_HS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HearthStone";

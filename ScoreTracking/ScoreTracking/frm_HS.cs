@@ -32,7 +32,7 @@ namespace ScoreTracking
         private void PreencheComboBoxes()
         {
             LeArquivo(Properties.Resources.classes);
-
+            
             form_Controls = this.Controls;
             List<ComboBox> comboBoxes = form_Controls.OfType<ComboBox>().ToList().Where(x => !x.Name.Contains("Vencedor")).ToList();
             List<PictureBox> pictureBoxes = form_Controls.OfType<PictureBox>().ToList();            
@@ -49,8 +49,8 @@ namespace ScoreTracking
 
                 PictureBox pictureBox = pictureBoxes.Where(x => x.Name.Contains(comboBoxes[i].Name.Substring(3,4))).ToArray()[0];
                 Label label = form_Controls.OfType<Label>().ToList().Where(x => x.Name.Contains(comboBoxes[i].Name.Substring(3,4))).ToList()[0];
-                pictureBox.Image = champions[0].GetImage();
-                label.Text = champions[0].Classe;                                         
+                pictureBox.Image = championsTemp[0].GetImage();
+                label.Text = championsTemp[0].Classe;                                         
             }
         }
 

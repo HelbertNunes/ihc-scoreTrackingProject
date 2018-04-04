@@ -10,5 +10,11 @@ namespace ScoreTracking
     {
         protected int Ganhador { get; set; }
         protected TimeSpan Duracao { get; set; }            
+
+        public enum Vencedor
+        {
+            Aliado,
+            Inimigo
+        };
     }        
 }
