@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,13 @@ namespace ScoreTracking
 {
     public class PartidaHS : Partida
     {
-        private string deckOponente { get; set; }
+        public PartidaHS(Vencedor vencedor, Champion heroi) 
+            : base(vencedor, heroi)
+        {
+        }
+
+        
+        private string deckOponente { get; set; }        
         private string deckUsuario { get; set; }
     }
 }

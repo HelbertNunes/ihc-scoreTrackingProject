@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,25 @@ namespace ScoreTracking
 {
     public class PartidaPaladins : Partida
     {
-        private string Mapa { get; set; }       
-        private int pontosAliado { get; set; }
-        private int pontosInimigo { get; set; }
+        public PartidaPaladins(Vencedor vencedor, Champion_Paladins heroi, Champion_Paladins[] aliados, Champion_Paladins[] inimigos, int pontosAliado, int pontosInimigo,string mapa) 
+            : base(vencedor, heroi)
+        {
+            this.pontosAliado = pontosAliado;
+            this.pontosInimigo = pontosInimigo;
+            this.Time_Aliado = aliados;
+            this.Time_Inimigo = inimigos;
+            this.Mapa = mapa;
+        }
+
+        [JsonProperty]
+        public string Mapa { get; private set; }
+        [JsonProperty]
+        public int pontosAliado { get; private set; }
+        [JsonProperty]
+        public int pontosInimigo { get; private set; }
+        [JsonProperty]
+        public Champion_Paladins[] Time_Aliado { get; private set; }
+        [JsonProperty]
+        public Champion_Paladins[] Time_Inimigo { get; private set; }
     }
 }

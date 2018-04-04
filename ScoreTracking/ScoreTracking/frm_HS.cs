@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -14,6 +16,7 @@ namespace ScoreTracking
     {
         private List<Champion_HS> champions = new List<Champion_HS>();
         private Control.ControlCollection form_Controls;
+        private const string JSON_PATH = @".\partidas_hs.json";
         Form formMenu;
 
         public frm_HS(Form form)
@@ -31,6 +34,11 @@ namespace ScoreTracking
 
         private void PreencheComboBoxes()
         {
+            if (!File.Exists(JSON_PATH))
+            {
+                File.Create(JSON_PATH);
+            }
+
             LeArquivo(Properties.Resources.classes);
             
             form_Controls = this.Controls;
@@ -90,6 +98,29 @@ namespace ScoreTracking
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private List<PartidaHS> LeJSON()
+        {
+            List<PartidaHS> partidas = JsonConvert.DeserializeObject<List<PartidaHS>>(File.ReadAllText(JSON_PATH));
+
+            if (partidas is null || partidas[0].Seu_Heroi is null) partidas = new List<PartidaHS>();
+
+            return partidas;
+        }
+
+        private void bt_Salvar_Click(object sender, EventArgs e)
+        {
+            Partida.Vencedor vencedor = (cb_vencedor.SelectedIndex == 0) ? Partida.Vencedor.Aliado : Partida.Vencedor.Inimigo;
+            Champion seu_heroi = (Champion_HS)cb_ally_hero.SelectedItem;
+
+            PartidaHS partida = new PartidaHS(vencedor, seu_heroi);
+
+            List<PartidaHS> partidas = LeJSON();
+
+            partidas.Add(partida);
+
+            File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
         }
     }
 }

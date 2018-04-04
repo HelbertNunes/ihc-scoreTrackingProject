@@ -401,6 +401,21 @@ namespace ScoreTracking.Properties {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Ilha dos Sapos
+        ///Cataratas do Jaguar
+        ///Praia da Serpente
+        ///Mercado dos Peixes
+        ///Serraria da Solidão
+        ///Minas de Gelo
+        ///Pico do Ascendido.
+        /// </summary>
+        internal static string maps_paladins {
+            get {
+                return ResourceManager.GetString("maps_paladins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Moji {

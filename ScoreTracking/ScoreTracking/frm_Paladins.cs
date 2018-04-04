@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using System.IO;
 using System.ComponentModel;
 using System.Data;
@@ -16,17 +17,24 @@ namespace ScoreTracking
         private List<Champion_Paladins> champions = new List<Champion_Paladins>();
         private List<string> mapas = new List<string>();
         private Control.ControlCollection form_Controls;
+        private Champion_Paladins seu_heroi;
+        private const string JSON_PATH = @".\partidas_paladins.json";
         Form formMenu;
 
         public frm_Paladins(Form form)
         {
             InitializeComponent();
-            PreencheComboBoxes();
+            PreencheCampos();
             formMenu = form;
         }
 
-        private void PreencheComboBoxes()
-        {            
+        private void PreencheCampos()
+        {
+            if (!File.Exists(JSON_PATH))
+            {
+                File.Create(JSON_PATH);
+            }
+
             LeArquivo(Properties.Resources.champions_paladins);
 
             form_Controls = this.Controls;
@@ -62,6 +70,15 @@ namespace ScoreTracking
 
                 comboBoxes[i].SelectedIndexChanged += new EventHandler(AtualizaDados);                                
             }
+
+            seu_heroi = (Champion_Paladins)comboBoxes.Where(x => x.Name.Contains("ally1")).ToList()[0].SelectedItem;
+        }
+
+        private void SelecionaHeroi(object sender, EventArgs e)
+        {
+            PictureBox pictureBox = (PictureBox)sender;
+
+            seu_heroi = (Champion_Paladins)form_Controls.OfType<ComboBox>().ToList().Where(x => x.Name.Contains(pictureBox.Name.Substring(3))).ToList()[0].SelectedItem;
         }
 
         private void AtualizaDados(object sender, EventArgs e)
@@ -110,6 +127,49 @@ namespace ScoreTracking
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private List<PartidaPaladins> LeJSON()
+        {            
+            List<PartidaPaladins> partidas = JsonConvert.DeserializeObject<List<PartidaPaladins>>(File.ReadAllText(JSON_PATH));
+
+            if (partidas is null || partidas[0].Time_Aliado is null) partidas = new List<PartidaPaladins>();
+
+            return partidas;
+        }
+
+        private void bt_Salvar_Click(object sender, EventArgs e)
+        {
+            List<ComboBox> comboBoxes_ally = form_Controls.OfType<ComboBox>().ToList().Where(x => x.Name.Contains("ally")).ToList();
+            List<ComboBox> comboBoxes_enemy = form_Controls.OfType<ComboBox>().ToList().Where(x => x.Name.Contains("enemy")).ToList();
+
+            List<Champion_Paladins> aliados = new List<Champion_Paladins>();
+            List<Champion_Paladins> inimigos = new List<Champion_Paladins>();
+
+            foreach(ComboBox comboBox in comboBoxes_ally)
+            {
+                aliados.Add((comboBox.SelectedItem as Champion_Paladins));
+            }
+
+            foreach (ComboBox comboBox in comboBoxes_ally)
+            {
+                inimigos.Add((comboBox.SelectedItem as Champion_Paladins));
+            }
+
+            int pont_aliado, pont_inimigo;
+
+            pont_aliado = int.Parse(mtxb_ally_points.Text);
+            pont_inimigo = int.Parse(mtxb_enemy_points.Text);
+
+            Partida.Vencedor vencedor = (pont_aliado > pont_inimigo) ? Partida.Vencedor.Aliado : Partida.Vencedor.Inimigo;
+
+            PartidaPaladins partida = new PartidaPaladins(vencedor, seu_heroi, aliados.ToArray(), inimigos.ToArray(), pont_aliado, pont_inimigo, "");
+
+            List<PartidaPaladins> partidas = LeJSON();
+
+            partidas.Add(partida);
+
+            File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));            
         }
     }
 }

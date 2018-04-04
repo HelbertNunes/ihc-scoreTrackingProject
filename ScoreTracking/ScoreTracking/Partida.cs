@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,16 @@ namespace ScoreTracking
 {
     public class Partida
     {
-        protected int Ganhador { get; set; }
-        protected TimeSpan Duracao { get; set; }            
+        public Partida(Vencedor vencedor, Champion heroi)
+        {
+            this.Ganhador = vencedor;
+            this.Seu_Heroi = heroi;
+        }
+
+        [JsonProperty]
+        protected Vencedor Ganhador { get; set; }
+        [JsonProperty]
+        public Champion Seu_Heroi { get; protected set; }
 
         public enum Vencedor
         {

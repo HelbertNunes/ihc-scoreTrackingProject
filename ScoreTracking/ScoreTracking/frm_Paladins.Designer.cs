@@ -93,6 +93,7 @@
             this.pb_ally1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_ally1.TabIndex = 0;
             this.pb_ally1.TabStop = false;
+            this.pb_ally1.Click += new System.EventHandler(this.SelecionaHeroi);
             // 
             // lb_ally
             // 
@@ -113,6 +114,7 @@
             this.pb_ally2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_ally2.TabIndex = 2;
             this.pb_ally2.TabStop = false;
+            this.pb_ally2.Click += new System.EventHandler(this.SelecionaHeroi);
             // 
             // pb_ally3
             // 
@@ -122,6 +124,7 @@
             this.pb_ally3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_ally3.TabIndex = 3;
             this.pb_ally3.TabStop = false;
+            this.pb_ally3.Click += new System.EventHandler(this.SelecionaHeroi);
             // 
             // pb_ally4
             // 
@@ -131,6 +134,7 @@
             this.pb_ally4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_ally4.TabIndex = 4;
             this.pb_ally4.TabStop = false;
+            this.pb_ally4.Click += new System.EventHandler(this.SelecionaHeroi);
             // 
             // pb_ally5
             // 
@@ -140,6 +144,7 @@
             this.pb_ally5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_ally5.TabIndex = 5;
             this.pb_ally5.TabStop = false;
+            this.pb_ally5.Click += new System.EventHandler(this.SelecionaHeroi);
             // 
             // cb_ally1
             // 
@@ -317,19 +322,21 @@
             // 
             // mtxb_ally_points
             // 
-            this.mtxb_ally_points.Location = new System.Drawing.Point(334, 105);
+            this.mtxb_ally_points.Location = new System.Drawing.Point(393, 105);
             this.mtxb_ally_points.Mask = "0";
             this.mtxb_ally_points.Name = "mtxb_ally_points";
-            this.mtxb_ally_points.Size = new System.Drawing.Size(52, 20);
+            this.mtxb_ally_points.Size = new System.Drawing.Size(30, 20);
             this.mtxb_ally_points.TabIndex = 25;
+            this.mtxb_ally_points.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // mtxb_enemy_points
             // 
-            this.mtxb_enemy_points.Location = new System.Drawing.Point(512, 103);
+            this.mtxb_enemy_points.Location = new System.Drawing.Point(474, 103);
             this.mtxb_enemy_points.Mask = "0";
             this.mtxb_enemy_points.Name = "mtxb_enemy_points";
-            this.mtxb_enemy_points.Size = new System.Drawing.Size(52, 20);
+            this.mtxb_enemy_points.Size = new System.Drawing.Size(30, 20);
             this.mtxb_enemy_points.TabIndex = 26;
+            this.mtxb_enemy_points.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lb_vs
             // 
@@ -450,6 +457,7 @@
             this.bt_Salvar.TabIndex = 39;
             this.bt_Salvar.Text = "&Salvar";
             this.bt_Salvar.UseVisualStyleBackColor = true;
+            this.bt_Salvar.Click += new System.EventHandler(this.bt_Salvar_Click);
             // 
             // mn_menu
             // 
@@ -480,6 +488,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 749);
+            this.Controls.Add(this.pb_ally1);
             this.Controls.Add(this.bt_Salvar);
             this.Controls.Add(this.bt_Voltar);
             this.Controls.Add(this.lb_enemy5_class);
@@ -519,7 +528,6 @@
             this.Controls.Add(this.pb_ally3);
             this.Controls.Add(this.pb_ally2);
             this.Controls.Add(this.lb_ally);
-            this.Controls.Add(this.pb_ally1);
             this.Controls.Add(this.mn_menu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mn_menu;
