@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using System.Drawing;
@@ -15,7 +16,9 @@ namespace ScoreTracking
             this.Classe = classe;
         }
 
+        [JsonProperty]
         public string Nome { get; protected set; }
+        [JsonProperty]
         public string Classe { get; protected set; }
 
         public abstract Bitmap GetImage();

@@ -475,6 +475,7 @@
             this.estatísticaToolStripMenuItem.Name = "estatísticaToolStripMenuItem";
             this.estatísticaToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.estatísticaToolStripMenuItem.Text = "&Estatística";
+            this.estatísticaToolStripMenuItem.Click += new System.EventHandler(this.estatísticaToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 

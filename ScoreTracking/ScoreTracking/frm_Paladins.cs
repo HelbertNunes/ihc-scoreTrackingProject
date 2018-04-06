@@ -19,13 +19,13 @@ namespace ScoreTracking
         private Control.ControlCollection form_Controls;
         private Champion_Paladins seu_heroi;
         private const string JSON_PATH = @".\partidas_paladins.json";
-        Form formMenu;
+        Form formMenu;        
 
         public frm_Paladins(Form form)
         {
             InitializeComponent();
             PreencheCampos();
-            formMenu = form;
+            formMenu = form;            
         }
 
         private void PreencheCampos()
@@ -36,6 +36,7 @@ namespace ScoreTracking
             }
 
             LeArquivo(Properties.Resources.champions_paladins);
+            LeArquivo(Properties.Resources.maps_paladins);
 
             form_Controls = this.Controls;
             List<ComboBox> comboBoxes = form_Controls.OfType<ComboBox>().ToList().Where(x => !x.Name.Contains("mapa")).ToList();
@@ -71,6 +72,7 @@ namespace ScoreTracking
                 comboBoxes[i].SelectedIndexChanged += new EventHandler(AtualizaDados);                                
             }
 
+            cb_mapa.DataSource = mapas;
             seu_heroi = (Champion_Paladins)comboBoxes.Where(x => x.Name.Contains("ally1")).ToList()[0].SelectedItem;
         }
 
@@ -158,18 +160,32 @@ namespace ScoreTracking
 
             int pont_aliado, pont_inimigo;
 
+            if (string.IsNullOrEmpty(mtxb_ally_points.Text) || string.IsNullOrEmpty(mtxb_enemy_points.Text))
+            {
+                MessageBox.Show("Invira valores válidos para a pontuação", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             pont_aliado = int.Parse(mtxb_ally_points.Text);
             pont_inimigo = int.Parse(mtxb_enemy_points.Text);
 
+            string mapa = cb_mapa.SelectedItem.ToString();
+
             Partida.Vencedor vencedor = (pont_aliado > pont_inimigo) ? Partida.Vencedor.Aliado : Partida.Vencedor.Inimigo;
 
-            PartidaPaladins partida = new PartidaPaladins(vencedor, seu_heroi, aliados.ToArray(), inimigos.ToArray(), pont_aliado, pont_inimigo, "");
+            PartidaPaladins partida = new PartidaPaladins(vencedor, seu_heroi, aliados.ToArray(), inimigos.ToArray(), pont_aliado, pont_inimigo, mapa);
 
             List<PartidaPaladins> partidas = LeJSON();
 
             partidas.Add(partida);
 
             File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));            
+        }
+
+        private void estatísticaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formEstatistica = new frm_Estatistica(this);
+            formEstatistica.ShowDialog();
         }
     }
 }

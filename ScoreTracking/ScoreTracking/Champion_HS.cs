@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Resources;
@@ -13,8 +14,11 @@ namespace ScoreTracking
         public Champion_HS(string nome, string classe) 
             : base(nome, classe)
         {
+            this.Jogo = "HS";
         }
 
+        [JsonProperty]
+        public string Jogo { get; protected set; }
         public override Bitmap GetImage()
         {
             ResourceManager rm = Properties.Resources.ResourceManager;

@@ -17,13 +17,13 @@ namespace ScoreTracking
         private List<Champion_HS> champions = new List<Champion_HS>();
         private Control.ControlCollection form_Controls;
         private const string JSON_PATH = @".\partidas_hs.json";
-        Form formMenu;
+        Form formMenu;        
 
         public frm_HS(Form form)
         {
             InitializeComponent();
             PreencheComboBoxes();
-            formMenu = form;
+            formMenu = form;            
         }
 
         private void bt_Voltar_Click(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace ScoreTracking
             LeArquivo(Properties.Resources.classes);
             
             form_Controls = this.Controls;
-            List<ComboBox> comboBoxes = form_Controls.OfType<ComboBox>().ToList().Where(x => !x.Name.Contains("Vencedor")).ToList();
+            List<ComboBox> comboBoxes = form_Controls.OfType<ComboBox>().ToList().Where(x => !x.Name.Contains("vencedor")).ToList();
             List<PictureBox> pictureBoxes = form_Controls.OfType<PictureBox>().ToList();            
 
             for (int i = 0; i < comboBoxes.Count; i++)
@@ -121,6 +121,12 @@ namespace ScoreTracking
             partidas.Add(partida);
 
             File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
+        }
+
+        private void estatísticaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formEstatistica = new frm_Estatistica(this);
+            formEstatistica.ShowDialog();
         }
     }
 }

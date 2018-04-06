@@ -16,7 +16,7 @@ namespace ScoreTracking
         }
 
         [JsonProperty]
-        protected Vencedor Ganhador { get; set; }
+        public Vencedor Ganhador { get; protected set; }
         [JsonProperty]
         public Champion Seu_Heroi { get; protected set; }
 
