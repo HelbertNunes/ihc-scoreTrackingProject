@@ -12,13 +12,11 @@ namespace ScoreTracking
     public class Champion_HS : Champion
     {
         public Champion_HS(string nome, string classe) 
-            : base(nome, classe)
-        {
-            this.Jogo = "HS";
+            : base(nome, classe, "HS")
+        {            
         }
 
-        [JsonProperty]
-        public string Jogo { get; protected set; }
+        
         public override Bitmap GetImage()
         {
             ResourceManager rm = Properties.Resources.ResourceManager;

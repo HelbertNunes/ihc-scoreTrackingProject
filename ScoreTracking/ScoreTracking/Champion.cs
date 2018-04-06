@@ -8,14 +8,18 @@ using System.Threading.Tasks;
 
 namespace ScoreTracking
 {
+    
     public abstract class Champion
     {
-        public Champion(string nome, string classe)
+        protected Champion(string nome, string classe, string jogo)
         {
+            this.Jogo = jogo;
             this.Nome = nome;
             this.Classe = classe;
         }
 
+        [JsonProperty]
+        public string Jogo { get; protected set; }
         [JsonProperty]
         public string Nome { get; protected set; }
         [JsonProperty]

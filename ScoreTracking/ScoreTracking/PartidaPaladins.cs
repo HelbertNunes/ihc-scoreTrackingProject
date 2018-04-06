@@ -9,9 +9,10 @@ namespace ScoreTracking
 {
     public class PartidaPaladins : Partida
     {
-        public PartidaPaladins(Vencedor vencedor, Champion_Paladins heroi, Champion_Paladins[] aliados, Champion_Paladins[] inimigos, int pontosAliado, int pontosInimigo,string mapa) 
-            : base(vencedor, heroi)
+        public PartidaPaladins(Vencedor vencedor, Champion_Paladins champion, Champion_Paladins[] aliados, Champion_Paladins[] inimigos, int pontosAliado, int pontosInimigo,string mapa) 
+            : base(vencedor)
         {
+            this.Seu_Heroi = champion;
             this.pontosAliado = pontosAliado;
             this.pontosInimigo = pontosInimigo;
             this.Time_Aliado = aliados;
@@ -20,7 +21,7 @@ namespace ScoreTracking
         }
 
         [JsonProperty]
-        public string Mapa { get; private set; }
+        public string Mapa { get; private set; }        
         [JsonProperty]
         public int pontosAliado { get; private set; }
         [JsonProperty]

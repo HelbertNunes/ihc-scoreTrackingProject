@@ -36,6 +36,7 @@
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChampionConverter.cs" />
     <Compile Include="Champion_HS.cs" />
     <Compile Include="Champion_Paladins.cs" />
     <Compile Include="frm_Estatistica.cs">
@@ -68,6 +70,12 @@
     </Compile>
     <Compile Include="frm_Menu.Designer.cs">
       <DependentUpon>frm_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Notification.Designer.cs">
+      <DependentUpon>frm_Notification.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Paladins.cs">
       <SubType>Form</SubType>
@@ -89,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Menu.resx">
       <DependentUpon>frm_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Notification.resx">
+      <DependentUpon>frm_Notification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Paladins.resx">
       <DependentUpon>frm_Paladins.cs</DependentUpon>
@@ -140,6 +151,8 @@
     <None Include="Resources\Database\HS\classes.txt" />
     <None Include="Resources\900px-Battlefield_-_The_Grand_Tournament.jpg" />
     <None Include="Resources\Database\Paladins\maps_paladins.txt" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\check1.png" />
     <Content Include="Resources\Images\Paladins\Androxus.png" />
     <Content Include="Resources\Images\Paladins\Ash.png" />
     <Content Include="Resources\Images\Paladins\Barik.png" />

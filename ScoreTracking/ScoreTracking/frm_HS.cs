@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
+using System.Windows.Controls.Primitives;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -55,22 +56,17 @@ namespace ScoreTracking
                 comboBoxes[i].SelectedIndexChanged += new EventHandler(AtualizaDados);
 
 
-                PictureBox pictureBox = pictureBoxes.Where(x => x.Name.Contains(comboBoxes[i].Name.Substring(3,4))).ToArray()[0];
-                Label label = form_Controls.OfType<Label>().ToList().Where(x => x.Name.Contains(comboBoxes[i].Name.Substring(3,4))).ToList()[0];
-                pictureBox.Image = championsTemp[0].GetImage();
-                label.Text = championsTemp[0].Classe;                                         
+                PictureBox pictureBox = pictureBoxes.Where(x => x.Name.Contains(comboBoxes[i].Name.Substring(3,4))).ToArray()[0];                
+                pictureBox.Image = championsTemp[0].GetImage();                                                   
             }
         }
 
         private void AtualizaDados(object sender, EventArgs e)
-        {
+        {            
             ComboBox comboBox = (ComboBox)sender;
             Champion champion = (Champion_HS)comboBox.SelectedItem;
 
-            PictureBox pictureBox = form_Controls.OfType<PictureBox>().ToList().Where(x => x.Name.Contains(comboBox.Name.Substring(3,4))).ToList()[0];
-            Label label = form_Controls.OfType<Label>().ToList().Where(x => x.Name.Contains(comboBox.Name.Substring(3,4))).ToList()[0];
-
-            label.Text = champion.Classe;
+            PictureBox pictureBox = form_Controls.OfType<PictureBox>().ToList().Where(x => x.Name.Contains(comboBox.Name.Substring(3,4))).ToList()[0];         
 
             pictureBox.Image = champion.GetImage();
         }
@@ -102,7 +98,8 @@ namespace ScoreTracking
 
         private List<PartidaHS> LeJSON()
         {
-            List<PartidaHS> partidas = JsonConvert.DeserializeObject<List<PartidaHS>>(File.ReadAllText(JSON_PATH));
+            JsonConverter[] converters = { new ChampionConverter() };
+            List<PartidaHS> partidas = JsonConvert.DeserializeObject<List<PartidaHS>>(File.ReadAllText(JSON_PATH), new JsonSerializerSettings() { Converters = converters });
 
             if (partidas is null || partidas[0].Seu_Heroi is null) partidas = new List<PartidaHS>();
 
@@ -112,7 +109,7 @@ namespace ScoreTracking
         private void bt_Salvar_Click(object sender, EventArgs e)
         {
             Partida.Vencedor vencedor = (cb_vencedor.SelectedIndex == 0) ? Partida.Vencedor.Aliado : Partida.Vencedor.Inimigo;
-            Champion seu_heroi = (Champion_HS)cb_ally_hero.SelectedItem;
+            Champion_HS seu_heroi = (Champion_HS)cb_ally_hero.SelectedItem;
 
             PartidaHS partida = new PartidaHS(vencedor, seu_heroi);
 
@@ -121,6 +118,9 @@ namespace ScoreTracking
             partidas.Add(partida);
 
             File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
+
+            Form alert = new frm_Notification();
+            alert.ShowDialog();
         }
 
         private void estatísticaToolStripMenuItem_Click(object sender, EventArgs e)

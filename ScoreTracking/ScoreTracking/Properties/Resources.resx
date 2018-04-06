@@ -142,8 +142,8 @@
   <data name="Maeve" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Paladins\Maeve.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Androxus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Paladins\Androxus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="maps_paladins" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Database\Paladins\maps_paladins.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="Moji" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Paladins\Moji.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,14 +154,11 @@
   <data name="Ladino" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\HS\Ladino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="League_of_Legends_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\League_of_Legends_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Xama" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\HS\Xama.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Guerreiro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\HS\Guerreiro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zhin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Paladins\Zhin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Bruxo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\HS\Bruxo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -171,6 +168,12 @@
   </data>
   <data name="Fernando" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Paladins\Fernando.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Barik" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Paladins\Barik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ShaLin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Paladins\ShaLin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Torvald" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Paladins\Torvald.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,8 +187,8 @@
   <data name="Terminus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Paladins\Terminus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Barik" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Paladins\Barik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="League_of_Legends_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\League_of_Legends_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Tyra" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Paladins\Tyra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,20 +211,14 @@
   <data name="Kinessa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Paladins\Kinessa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ShaLin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Paladins\ShaLin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zhin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Paladins\Zhin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Xama" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\HS\Xama.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Buck" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Paladins\Buck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Lian" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Paladins\Lian.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Caçador" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\HS\Caçador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Grohk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Paladins\Grohk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Mal_Damba" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Paladins\Mal'Damba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,8 +226,8 @@
   <data name="Ying" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Paladins\Ying.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Drogoz" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Paladins\Drogoz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Buck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Paladins\Buck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1393ff58b34cbdfbe28ee8f2c7380508" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1393ff58b34cbdfbe28ee8f2c7380508.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,14 +238,14 @@
   <data name="qJY7LuHX_400x400" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\qJY7LuHX_400x400.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Lian" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Paladins\Lian.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="900px-Battlefield_-_The_Grand_Tournament" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\900px-Battlefield_-_The_Grand_Tournament.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Vivian" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Paladins\Vivian.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Pip" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Paladins\Pip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Androxus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Paladins\Androxus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Inara" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Paladins\Inara.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,19 +253,25 @@
   <data name="Makoa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Paladins\Makoa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Drogoz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Paladins\Drogoz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Druida" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\HS\Druida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ruckus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Paladins\Ruckus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Pip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Paladins\Pip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Grohk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Paladins\Grohk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Strix" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Paladins\Strix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="900px-Battlefield_-_The_Grand_Tournament" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\900px-Battlefield_-_The_Grand_Tournament.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="maps_paladins" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Database\Paladins\maps_paladins.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="check" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

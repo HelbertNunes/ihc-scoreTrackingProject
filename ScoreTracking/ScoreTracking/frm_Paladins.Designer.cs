@@ -72,6 +72,8 @@
             this.mn_menu = new System.Windows.Forms.MenuStrip();
             this.estatísticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pn_selecao_heroi = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally3)).BeginInit();
@@ -98,11 +100,11 @@
             // lb_ally
             // 
             this.lb_ally.AutoSize = true;
-            this.lb_ally.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ally.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_ally.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lb_ally.Location = new System.Drawing.Point(91, 103);
+            this.lb_ally.Location = new System.Drawing.Point(95, 90);
             this.lb_ally.Name = "lb_ally";
-            this.lb_ally.Size = new System.Drawing.Size(111, 20);
+            this.lb_ally.Size = new System.Drawing.Size(122, 20);
             this.lb_ally.TabIndex = 1;
             this.lb_ally.Text = "TIME ALIADO";
             // 
@@ -275,11 +277,11 @@
             // lb_enemy
             // 
             this.lb_enemy.AutoSize = true;
-            this.lb_enemy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_enemy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_enemy.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lb_enemy.Location = new System.Drawing.Point(761, 103);
+            this.lb_enemy.Location = new System.Drawing.Point(755, 92);
             this.lb_enemy.Name = "lb_enemy";
-            this.lb_enemy.Size = new System.Drawing.Size(115, 20);
+            this.lb_enemy.Size = new System.Drawing.Size(127, 20);
             this.lb_enemy.TabIndex = 12;
             this.lb_enemy.Text = "TIME INIMIGO";
             // 
@@ -296,7 +298,7 @@
             // 
             this.lb_mapa.AutoSize = true;
             this.lb_mapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_mapa.Location = new System.Drawing.Point(379, 24);
+            this.lb_mapa.Location = new System.Drawing.Point(370, 24);
             this.lb_mapa.Name = "lb_mapa";
             this.lb_mapa.Size = new System.Drawing.Size(58, 20);
             this.lb_mapa.TabIndex = 22;
@@ -306,7 +308,7 @@
             // 
             this.cb_mapa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_mapa.FormattingEnabled = true;
-            this.cb_mapa.Location = new System.Drawing.Point(443, 23);
+            this.cb_mapa.Location = new System.Drawing.Point(434, 23);
             this.cb_mapa.Name = "cb_mapa";
             this.cb_mapa.Size = new System.Drawing.Size(121, 21);
             this.cb_mapa.TabIndex = 23;
@@ -322,7 +324,7 @@
             // 
             // mtxb_ally_points
             // 
-            this.mtxb_ally_points.Location = new System.Drawing.Point(393, 105);
+            this.mtxb_ally_points.Location = new System.Drawing.Point(393, 92);
             this.mtxb_ally_points.Mask = "0";
             this.mtxb_ally_points.Name = "mtxb_ally_points";
             this.mtxb_ally_points.Size = new System.Drawing.Size(30, 20);
@@ -331,7 +333,7 @@
             // 
             // mtxb_enemy_points
             // 
-            this.mtxb_enemy_points.Location = new System.Drawing.Point(474, 103);
+            this.mtxb_enemy_points.Location = new System.Drawing.Point(474, 90);
             this.mtxb_enemy_points.Mask = "0";
             this.mtxb_enemy_points.Name = "mtxb_enemy_points";
             this.mtxb_enemy_points.Size = new System.Drawing.Size(30, 20);
@@ -342,7 +344,7 @@
             // 
             this.lb_vs.AutoSize = true;
             this.lb_vs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_vs.Location = new System.Drawing.Point(440, 105);
+            this.lb_vs.Location = new System.Drawing.Point(440, 92);
             this.lb_vs.Name = "lb_vs";
             this.lb_vs.Size = new System.Drawing.Size(20, 20);
             this.lb_vs.TabIndex = 27;
@@ -352,7 +354,7 @@
             // 
             this.lb_pontuacao.AutoSize = true;
             this.lb_pontuacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_pontuacao.Location = new System.Drawing.Point(394, 67);
+            this.lb_pontuacao.Location = new System.Drawing.Point(394, 54);
             this.lb_pontuacao.Name = "lb_pontuacao";
             this.lb_pontuacao.Size = new System.Drawing.Size(112, 20);
             this.lb_pontuacao.TabIndex = 28;
@@ -484,11 +486,31 @@
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(126, 116);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(142, 18);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Selecione seu herói:";
+            // 
+            // pn_selecao_heroi
+            // 
+            this.pn_selecao_heroi.BackColor = System.Drawing.Color.Red;
+            this.pn_selecao_heroi.Location = new System.Drawing.Point(274, 137);
+            this.pn_selecao_heroi.Name = "pn_selecao_heroi";
+            this.pn_selecao_heroi.Size = new System.Drawing.Size(23, 85);
+            this.pn_selecao_heroi.TabIndex = 42;
+            // 
             // frm_Paladins
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 749);
+            this.Controls.Add(this.pn_selecao_heroi);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pb_ally1);
             this.Controls.Add(this.bt_Salvar);
             this.Controls.Add(this.bt_Voltar);
@@ -599,5 +621,7 @@
         private System.Windows.Forms.MenuStrip mn_menu;
         private System.Windows.Forms.ToolStripMenuItem estatísticaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pn_selecao_heroi;
     }
 }

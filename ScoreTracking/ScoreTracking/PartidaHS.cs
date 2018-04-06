@@ -9,11 +9,11 @@ namespace ScoreTracking
 {
     public class PartidaHS : Partida
     {
-        public PartidaHS(Vencedor vencedor, Champion heroi) 
-            : base(vencedor, heroi)
+        public PartidaHS(Vencedor vencedor, Champion_HS champion) 
+            : base(vencedor)
         {
+            this.Seu_Heroi = champion;
         }
-
         
         private string deckOponente { get; set; }        
         private string deckUsuario { get; set; }

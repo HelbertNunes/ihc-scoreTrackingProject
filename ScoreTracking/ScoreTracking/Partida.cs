@@ -9,10 +9,9 @@ namespace ScoreTracking
 {
     public class Partida
     {
-        public Partida(Vencedor vencedor, Champion heroi)
-        {
-            this.Ganhador = vencedor;
-            this.Seu_Heroi = heroi;
+        protected Partida(Vencedor vencedor)
+        {            
+            this.Ganhador = vencedor;            
         }
 
         [JsonProperty]

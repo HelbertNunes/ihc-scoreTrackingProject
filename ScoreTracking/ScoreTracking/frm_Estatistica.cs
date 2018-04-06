@@ -15,7 +15,7 @@ namespace ScoreTracking
     public partial class frm_Estatistica : Form
     {
         private List<Champion> champions = new List<Champion>();
-        private List<Partida> partidas;
+        private List<Partida> partidas = new List<Partida>();
         private const string JSON_HS_PATH = @".\partidas_hs.json";
         private const string JSON_PALADINS_PATH = @".\partidas_paladins.json";
         Form sender;
@@ -55,10 +55,11 @@ namespace ScoreTracking
             int numPartidasGeral, numPartidasHeroi;
             List<PartidaHS> partidasHS;
             List<PartidaPaladins> partidasPaladins;
+            JsonConverter[] converters = { new ChampionConverter() };
 
             if (sender.Name.Contains("HS"))
             {
-                partidasHS = JsonConvert.DeserializeObject<List<PartidaHS>>(File.ReadAllText(JSON_HS_PATH));
+                partidasHS = JsonConvert.DeserializeObject<List<PartidaHS>>(File.ReadAllText(JSON_HS_PATH), new JsonSerializerSettings() { Converters = converters });
 
                 if (partidasHS is null || partidasHS[0].Seu_Heroi is null) partidas = new List<Partida>();
                 else
@@ -71,7 +72,7 @@ namespace ScoreTracking
             }
             else
             {
-                partidasPaladins = JsonConvert.DeserializeObject<List<PartidaPaladins>>(File.ReadAllText(JSON_PALADINS_PATH));
+                partidasPaladins = JsonConvert.DeserializeObject<List<PartidaPaladins>>(File.ReadAllText(JSON_PALADINS_PATH), new JsonSerializerSettings() { Converters = converters });
 
                 if (partidasPaladins is null || partidasPaladins[0].Seu_Heroi is null) partidas = new List<Partida>();
                 else
@@ -81,19 +82,18 @@ namespace ScoreTracking
                         partidas.Add(partida);
                     }
                 }
-            }
-            
-            
-            
+            }                               
 
             Champion champion = (Champion)cb_por_heroi.SelectedItem;
 
             numPartidasGeral = partidas.Count;
-            numPartidasHeroi = partidas.Count(x => x.Seu_Heroi.Nome.Contains(champion.Nome));            
+            numPartidasHeroi = partidas.Count(x => x.Seu_Heroi.Nome.Contains(champion.Nome));
 
-            double percent_Heroi = (partidas.Count(x => x.Seu_Heroi.Nome.Contains(champion.Nome) && x.Ganhador == Partida.Vencedor.Aliado) / Convert.ToDouble(numPartidasHeroi)) * 100;
+            double percent_Heroi = 0, percent_Geral = 0;
 
-            double percent_Geral = (partidas.Count(x => x.Ganhador == Partida.Vencedor.Aliado) / Convert.ToDouble(numPartidasGeral)) * 100;
+            if (numPartidasHeroi != 0) percent_Heroi = (partidas.Count(x => x.Seu_Heroi.Nome.Contains(champion.Nome) && x.Ganhador == Partida.Vencedor.Aliado) / Convert.ToDouble(numPartidasHeroi)) * 100;
+
+            if (numPartidasGeral != 0) percent_Geral = (partidas.Count(x => x.Ganhador == Partida.Vencedor.Aliado) / Convert.ToDouble(numPartidasGeral)) * 100;
 
             lb_num_partidas_geral.Text = numPartidasGeral.ToString();
             lb_num_partidas_heroi.Text = numPartidasHeroi.ToString();
@@ -117,5 +117,16 @@ namespace ScoreTracking
             }
         }
 
+        private void cb_por_heroi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Champion champion = (Champion)cb_por_heroi.SelectedItem;
+            int numPartidasHeroi = partidas.Count(x => x.Seu_Heroi.Nome.Contains(champion.Nome));
+            double percent_Heroi = 0;
+
+            if (numPartidasHeroi != 0) percent_Heroi = (partidas.Count(x => x.Seu_Heroi.Nome.Contains(champion.Nome) && x.Ganhador == Partida.Vencedor.Aliado) / Convert.ToDouble(numPartidasHeroi)) * 100;
+
+            lb_num_partidas_heroi.Text = numPartidasHeroi.ToString();
+            lb_val_win_rate_heroi.Text = string.Format($"{percent_Heroi} %");
+        }
     }
 }

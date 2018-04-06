@@ -32,17 +32,17 @@
             this.cb_por_heroi = new System.Windows.Forms.ComboBox();
             this.lb_heroi = new System.Windows.Forms.Label();
             this.pn_por_heroi = new System.Windows.Forms.Panel();
+            this.lb_val_win_rate_heroi = new System.Windows.Forms.Label();
+            this.lb_num_partidas_heroi = new System.Windows.Forms.Label();
             this.lb_win_rate_heroi = new System.Windows.Forms.Label();
             this.lb_partidas_heroi = new System.Windows.Forms.Label();
             this.lb_por_heroi = new System.Windows.Forms.Label();
             this.pn_geral = new System.Windows.Forms.Panel();
+            this.lb_val_win_rate_geral = new System.Windows.Forms.Label();
+            this.lb_num_partidas_geral = new System.Windows.Forms.Label();
             this.lb_win_rate_geral = new System.Windows.Forms.Label();
             this.lb_partidas_geral = new System.Windows.Forms.Label();
             this.lb_geral = new System.Windows.Forms.Label();
-            this.lb_num_partidas_heroi = new System.Windows.Forms.Label();
-            this.lb_val_win_rate_heroi = new System.Windows.Forms.Label();
-            this.lb_num_partidas_geral = new System.Windows.Forms.Label();
-            this.lb_val_win_rate_geral = new System.Windows.Forms.Label();
             this.pn_por_heroi.SuspendLayout();
             this.pn_geral.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +55,7 @@
             this.cb_por_heroi.Name = "cb_por_heroi";
             this.cb_por_heroi.Size = new System.Drawing.Size(121, 21);
             this.cb_por_heroi.TabIndex = 0;
+            this.cb_por_heroi.SelectedIndexChanged += new System.EventHandler(this.cb_por_heroi_SelectedIndexChanged);
             // 
             // lb_heroi
             // 
@@ -79,6 +80,24 @@
             this.pn_por_heroi.Name = "pn_por_heroi";
             this.pn_por_heroi.Size = new System.Drawing.Size(303, 192);
             this.pn_por_heroi.TabIndex = 2;
+            // 
+            // lb_val_win_rate_heroi
+            // 
+            this.lb_val_win_rate_heroi.AutoSize = true;
+            this.lb_val_win_rate_heroi.Location = new System.Drawing.Point(160, 109);
+            this.lb_val_win_rate_heroi.Name = "lb_val_win_rate_heroi";
+            this.lb_val_win_rate_heroi.Size = new System.Drawing.Size(10, 13);
+            this.lb_val_win_rate_heroi.TabIndex = 5;
+            this.lb_val_win_rate_heroi.Text = "-";
+            // 
+            // lb_num_partidas_heroi
+            // 
+            this.lb_num_partidas_heroi.AutoSize = true;
+            this.lb_num_partidas_heroi.Location = new System.Drawing.Point(160, 77);
+            this.lb_num_partidas_heroi.Name = "lb_num_partidas_heroi";
+            this.lb_num_partidas_heroi.Size = new System.Drawing.Size(10, 13);
+            this.lb_num_partidas_heroi.TabIndex = 4;
+            this.lb_num_partidas_heroi.Text = "-";
             // 
             // lb_win_rate_heroi
             // 
@@ -122,6 +141,24 @@
             this.pn_geral.Size = new System.Drawing.Size(303, 192);
             this.pn_geral.TabIndex = 3;
             // 
+            // lb_val_win_rate_geral
+            // 
+            this.lb_val_win_rate_geral.AutoSize = true;
+            this.lb_val_win_rate_geral.Location = new System.Drawing.Point(157, 109);
+            this.lb_val_win_rate_geral.Name = "lb_val_win_rate_geral";
+            this.lb_val_win_rate_geral.Size = new System.Drawing.Size(10, 13);
+            this.lb_val_win_rate_geral.TabIndex = 7;
+            this.lb_val_win_rate_geral.Text = "-";
+            // 
+            // lb_num_partidas_geral
+            // 
+            this.lb_num_partidas_geral.AutoSize = true;
+            this.lb_num_partidas_geral.Location = new System.Drawing.Point(157, 77);
+            this.lb_num_partidas_geral.Name = "lb_num_partidas_geral";
+            this.lb_num_partidas_geral.Size = new System.Drawing.Size(10, 13);
+            this.lb_num_partidas_geral.TabIndex = 6;
+            this.lb_num_partidas_geral.Text = "-";
+            // 
             // lb_win_rate_geral
             // 
             this.lb_win_rate_geral.AutoSize = true;
@@ -151,42 +188,6 @@
             this.lb_geral.Size = new System.Drawing.Size(143, 20);
             this.lb_geral.TabIndex = 0;
             this.lb_geral.Text = "Estatística Geral";
-            // 
-            // lb_num_partidas_heroi
-            // 
-            this.lb_num_partidas_heroi.AutoSize = true;
-            this.lb_num_partidas_heroi.Location = new System.Drawing.Point(160, 77);
-            this.lb_num_partidas_heroi.Name = "lb_num_partidas_heroi";
-            this.lb_num_partidas_heroi.Size = new System.Drawing.Size(10, 13);
-            this.lb_num_partidas_heroi.TabIndex = 4;
-            this.lb_num_partidas_heroi.Text = "-";
-            // 
-            // lb_val_win_rate_heroi
-            // 
-            this.lb_val_win_rate_heroi.AutoSize = true;
-            this.lb_val_win_rate_heroi.Location = new System.Drawing.Point(160, 111);
-            this.lb_val_win_rate_heroi.Name = "lb_val_win_rate_heroi";
-            this.lb_val_win_rate_heroi.Size = new System.Drawing.Size(10, 13);
-            this.lb_val_win_rate_heroi.TabIndex = 5;
-            this.lb_val_win_rate_heroi.Text = "-";
-            // 
-            // lb_num_partidas_geral
-            // 
-            this.lb_num_partidas_geral.AutoSize = true;
-            this.lb_num_partidas_geral.Location = new System.Drawing.Point(157, 77);
-            this.lb_num_partidas_geral.Name = "lb_num_partidas_geral";
-            this.lb_num_partidas_geral.Size = new System.Drawing.Size(10, 13);
-            this.lb_num_partidas_geral.TabIndex = 6;
-            this.lb_num_partidas_geral.Text = "-";
-            // 
-            // lb_val_win_rate_geral
-            // 
-            this.lb_val_win_rate_geral.AutoSize = true;
-            this.lb_val_win_rate_geral.Location = new System.Drawing.Point(157, 109);
-            this.lb_val_win_rate_geral.Name = "lb_val_win_rate_geral";
-            this.lb_val_win_rate_geral.Size = new System.Drawing.Size(10, 13);
-            this.lb_val_win_rate_geral.TabIndex = 7;
-            this.lb_val_win_rate_geral.Text = "-";
             // 
             // frm_Estatistica
             // 

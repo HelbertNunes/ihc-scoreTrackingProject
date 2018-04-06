@@ -79,7 +79,9 @@ namespace ScoreTracking
         private void SelecionaHeroi(object sender, EventArgs e)
         {
             PictureBox pictureBox = (PictureBox)sender;
+            Point position = pictureBox.Location;
 
+            pn_selecao_heroi.Location = new Point(pn_selecao_heroi.Location.X, position.Y);
             seu_heroi = (Champion_Paladins)form_Controls.OfType<ComboBox>().ToList().Where(x => x.Name.Contains(pictureBox.Name.Substring(3))).ToList()[0].SelectedItem;
         }
 
@@ -132,8 +134,10 @@ namespace ScoreTracking
         }
 
         private List<PartidaPaladins> LeJSON()
-        {            
-            List<PartidaPaladins> partidas = JsonConvert.DeserializeObject<List<PartidaPaladins>>(File.ReadAllText(JSON_PATH));
+        {
+            JsonConverter[] converters = { new ChampionConverter() };
+
+            List<PartidaPaladins> partidas = JsonConvert.DeserializeObject<List<PartidaPaladins>>(File.ReadAllText(JSON_PATH), new JsonSerializerSettings() { Converters = converters });
 
             if (partidas is null || partidas[0].Time_Aliado is null) partidas = new List<PartidaPaladins>();
 
@@ -179,7 +183,10 @@ namespace ScoreTracking
 
             partidas.Add(partida);
 
-            File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));            
+            File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
+
+            Form alert = new frm_Notification();
+            alert.ShowDialog();
         }
 
         private void estatísticaToolStripMenuItem_Click(object sender, EventArgs e)
