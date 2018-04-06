@@ -43,7 +43,6 @@
             this.bt_Salvar = new System.Windows.Forms.Button();
             this.mn_menu = new System.Windows.Forms.MenuStrip();
             this.estatísticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_enemy)).BeginInit();
             this.mn_menu.SuspendLayout();
@@ -184,8 +183,7 @@
             // mn_menu
             // 
             this.mn_menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.estatísticaToolStripMenuItem,
-            this.sairToolStripMenuItem});
+            this.estatísticaToolStripMenuItem});
             this.mn_menu.Location = new System.Drawing.Point(0, 0);
             this.mn_menu.Name = "mn_menu";
             this.mn_menu.Size = new System.Drawing.Size(891, 24);
@@ -198,13 +196,6 @@
             this.estatísticaToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.estatísticaToolStripMenuItem.Text = "&Estatística";
             this.estatísticaToolStripMenuItem.Click += new System.EventHandler(this.estatísticaToolStripMenuItem_Click);
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.sairToolStripMenuItem.Text = "Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // frm_HS
             // 
@@ -257,6 +248,5 @@
         private System.Windows.Forms.Button bt_Salvar;
         private System.Windows.Forms.MenuStrip mn_menu;
         private System.Windows.Forms.ToolStripMenuItem estatísticaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
     }
 }

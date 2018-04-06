@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace ScoreTracking
@@ -15,7 +14,13 @@ namespace ScoreTracking
     {
         public frm_Notification()
         {
-            InitializeComponent();                        
+            InitializeComponent();
+            timer_close.Start();
+        }
+
+        private void timer_close_Tick(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

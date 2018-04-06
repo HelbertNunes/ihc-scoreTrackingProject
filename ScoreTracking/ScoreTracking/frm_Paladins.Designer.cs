@@ -71,7 +71,6 @@
             this.bt_Salvar = new System.Windows.Forms.Button();
             this.mn_menu = new System.Windows.Forms.MenuStrip();
             this.estatísticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pn_selecao_heroi = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally1)).BeginInit();
@@ -89,6 +88,7 @@
             // 
             // pb_ally1
             // 
+            this.pb_ally1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pb_ally1.Location = new System.Drawing.Point(145, 137);
             this.pb_ally1.Name = "pb_ally1";
             this.pb_ally1.Size = new System.Drawing.Size(123, 85);
@@ -110,6 +110,7 @@
             // 
             // pb_ally2
             // 
+            this.pb_ally2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pb_ally2.Location = new System.Drawing.Point(145, 244);
             this.pb_ally2.Name = "pb_ally2";
             this.pb_ally2.Size = new System.Drawing.Size(123, 85);
@@ -120,6 +121,7 @@
             // 
             // pb_ally3
             // 
+            this.pb_ally3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pb_ally3.Location = new System.Drawing.Point(145, 356);
             this.pb_ally3.Name = "pb_ally3";
             this.pb_ally3.Size = new System.Drawing.Size(123, 85);
@@ -130,6 +132,7 @@
             // 
             // pb_ally4
             // 
+            this.pb_ally4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pb_ally4.Location = new System.Drawing.Point(145, 467);
             this.pb_ally4.Name = "pb_ally4";
             this.pb_ally4.Size = new System.Drawing.Size(123, 85);
@@ -140,6 +143,7 @@
             // 
             // pb_ally5
             // 
+            this.pb_ally5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pb_ally5.Location = new System.Drawing.Point(145, 580);
             this.pb_ally5.Name = "pb_ally5";
             this.pb_ally5.Size = new System.Drawing.Size(123, 85);
@@ -464,8 +468,7 @@
             // mn_menu
             // 
             this.mn_menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.estatísticaToolStripMenuItem,
-            this.sairToolStripMenuItem});
+            this.estatísticaToolStripMenuItem});
             this.mn_menu.Location = new System.Drawing.Point(0, 0);
             this.mn_menu.Name = "mn_menu";
             this.mn_menu.Size = new System.Drawing.Size(942, 24);
@@ -478,13 +481,6 @@
             this.estatísticaToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.estatísticaToolStripMenuItem.Text = "&Estatística";
             this.estatísticaToolStripMenuItem.Click += new System.EventHandler(this.estatísticaToolStripMenuItem_Click);
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.sairToolStripMenuItem.Text = "Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -620,7 +616,6 @@
         private System.Windows.Forms.Button bt_Salvar;
         private System.Windows.Forms.MenuStrip mn_menu;
         private System.Windows.Forms.ToolStripMenuItem estatísticaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pn_selecao_heroi;
     }

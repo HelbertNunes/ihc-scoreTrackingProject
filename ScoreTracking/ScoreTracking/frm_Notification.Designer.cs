@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Notification));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lb_message = new System.Windows.Forms.Label();
+            this.timer_close = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,12 +57,17 @@
             this.lb_message.TabIndex = 1;
             this.lb_message.Text = "Salvo com sucesso";
             // 
+            // timer_close
+            // 
+            this.timer_close.Interval = 3000;
+            this.timer_close.Tick += new System.EventHandler(this.timer_close_Tick);
+            // 
             // frm_Notification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
-            this.ClientSize = new System.Drawing.Size(320, 94);
+            this.ClientSize = new System.Drawing.Size(311, 89);
             this.Controls.Add(this.lb_message);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -77,5 +84,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lb_message;
+        private System.Windows.Forms.Timer timer_close;
     }
 }

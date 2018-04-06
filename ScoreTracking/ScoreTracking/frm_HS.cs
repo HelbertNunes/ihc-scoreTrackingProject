@@ -87,8 +87,7 @@ namespace ScoreTracking
 
         private void frm_HS_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Hide();
-            formMenu.Show();
+            Application.Exit();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -120,7 +119,7 @@ namespace ScoreTracking
             File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
 
             Form alert = new frm_Notification();
-            alert.ShowDialog();
+            alert.Show();
         }
 
         private void estatísticaToolStripMenuItem_Click(object sender, EventArgs e)

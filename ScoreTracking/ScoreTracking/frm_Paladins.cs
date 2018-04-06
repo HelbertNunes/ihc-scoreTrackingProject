@@ -124,8 +124,7 @@ namespace ScoreTracking
 
         private void frm_Paladins_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Hide();
-            formMenu.Show();
+            Application.Exit();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
