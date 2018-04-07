@@ -128,5 +128,17 @@ namespace ScoreTracking
             lb_num_partidas_heroi.Text = numPartidasHeroi.ToString();
             lb_val_win_rate_heroi.Text = string.Format($"{percent_Heroi} %");
         }
+
+        private void limparEstatisticaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.sender.Name.Contains("HS"))
+                File.WriteAllText(JSON_HS_PATH, string.Empty);
+            else
+                File.WriteAllText(JSON_PALADINS_PATH, string.Empty);
+
+            Form notification = new frm_Notification("Estatísticas foram reiniciadas");
+            notification.Show();
+            CalculaEstatistica();
+        }
     }
 }

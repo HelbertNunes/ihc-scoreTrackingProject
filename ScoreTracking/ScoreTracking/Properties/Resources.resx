@@ -271,7 +271,25 @@
   <data name="Strix" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Paladins\Strix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="check" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\check1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cataratas_do_jaguar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Paladins\cataratas_do_jaguar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ilha_dos_sapos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Paladins\ilha_dos_sapos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mercado_dos_peixes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Paladins\mercado_dos_peixes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minas_de_gelo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Paladins\minas_de_gelo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pico_do_ascendido" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Paladins\pico_do_ascendido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="praia_da_serpente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Paladins\praia_da_serpente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="serraria_da_solidao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Paladins\serraria_da_solidao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -12,9 +12,11 @@ namespace ScoreTracking
 {
     public partial class frm_Notification : Form
     {
-        public frm_Notification()
+        public frm_Notification(string mensagem)
         {
             InitializeComponent();
+            ShowInTaskbar = false;
+            lb_message.Text = mensagem;
             timer_close.Start();
         }
 

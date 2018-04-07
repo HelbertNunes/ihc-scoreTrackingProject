@@ -69,11 +69,14 @@ namespace ScoreTracking
                     cont_enemy++;
                 }
 
+                pictureBox.BringToFront();
                 comboBoxes[i].SelectedIndexChanged += new EventHandler(AtualizaDados);                                
             }
 
-            cb_mapa.DataSource = mapas;
-            seu_heroi = (Champion_Paladins)comboBoxes.Where(x => x.Name.Contains("ally1")).ToList()[0].SelectedItem;
+            cb_mapa.DataSource = mapas.OrderBy(x => x).ToList();
+            pb_mapa.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject((cb_mapa.SelectedItem as string).ToLower().Replace(" ", "_"));
+
+            seu_heroi = (Champion_Paladins)comboBoxes.Where(x => x.Name.Contains("ally1")).ToList()[0].SelectedItem;            
         }
 
         private void SelecionaHeroi(object sender, EventArgs e)
@@ -81,7 +84,9 @@ namespace ScoreTracking
             PictureBox pictureBox = (PictureBox)sender;
             Point position = pictureBox.Location;
 
-            pn_selecao_heroi.Location = new Point(pn_selecao_heroi.Location.X, position.Y);
+            pictureBox.BringToFront();
+
+            pn_selecao_heroi.Location = new Point(pn_selecao_heroi.Location.X, position.Y - 10);
             seu_heroi = (Champion_Paladins)form_Controls.OfType<ComboBox>().ToList().Where(x => x.Name.Contains(pictureBox.Name.Substring(3))).ToList()[0].SelectedItem;
         }
 
@@ -184,7 +189,7 @@ namespace ScoreTracking
 
             File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
 
-            Form alert = new frm_Notification();
+            Form alert = new frm_Notification("Salvo com sucesso");
             alert.ShowDialog();
         }
 
@@ -192,6 +197,21 @@ namespace ScoreTracking
         {
             Form formEstatistica = new frm_Estatistica(this);
             formEstatistica.ShowDialog();
+        }
+
+        private void mtxb_ally_points_Click(object sender, EventArgs e)
+        {
+            mtxb_ally_points.SelectionStart = 0;
+        }
+
+        private void mtxb_enemy_points_Click(object sender, EventArgs e)
+        {
+            mtxb_ally_points.SelectionStart = 0;
+        }
+
+        private void cb_mapa_SelectedIndexChanged(object sender, EventArgs e)
+        {            
+            pb_mapa.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject((cb_mapa.SelectedItem as string).ToLower().Replace(" ", "_"));
         }
     }
 }

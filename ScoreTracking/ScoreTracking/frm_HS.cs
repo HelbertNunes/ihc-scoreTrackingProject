@@ -59,6 +59,9 @@ namespace ScoreTracking
                 PictureBox pictureBox = pictureBoxes.Where(x => x.Name.Contains(comboBoxes[i].Name.Substring(3,4))).ToArray()[0];                
                 pictureBox.Image = championsTemp[0].GetImage();                                                   
             }
+
+            ComboBox comboVencedor = form_Controls.OfType<ComboBox>().ToList().Where(x => x.Name.Contains("vencedor")).ToList()[0];
+            comboVencedor.SelectedIndex = 0;
         }
 
         private void AtualizaDados(object sender, EventArgs e)
@@ -118,7 +121,7 @@ namespace ScoreTracking
 
             File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
 
-            Form alert = new frm_Notification();
+            Form alert = new frm_Notification("Salvo com sucesso");
             alert.Show();
         }
 

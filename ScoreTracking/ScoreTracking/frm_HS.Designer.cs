@@ -53,7 +53,7 @@
             this.lb_ally.AutoSize = true;
             this.lb_ally.BackColor = System.Drawing.Color.Transparent;
             this.lb_ally.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ally.ForeColor = System.Drawing.Color.Cyan;
+            this.lb_ally.ForeColor = System.Drawing.Color.White;
             this.lb_ally.Location = new System.Drawing.Point(432, 494);
             this.lb_ally.Name = "lb_ally";
             this.lb_ally.Size = new System.Drawing.Size(54, 20);
@@ -65,7 +65,7 @@
             this.lb_enemy.AutoSize = true;
             this.lb_enemy.BackColor = System.Drawing.Color.Transparent;
             this.lb_enemy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_enemy.ForeColor = System.Drawing.Color.Cyan;
+            this.lb_enemy.ForeColor = System.Drawing.Color.White;
             this.lb_enemy.Location = new System.Drawing.Point(409, 28);
             this.lb_enemy.Name = "lb_enemy";
             this.lb_enemy.Size = new System.Drawing.Size(96, 20);
@@ -127,9 +127,9 @@
             // 
             // bt_Voltar
             // 
-            this.bt_Voltar.Location = new System.Drawing.Point(12, 499);
+            this.bt_Voltar.Location = new System.Drawing.Point(12, 494);
             this.bt_Voltar.Name = "bt_Voltar";
-            this.bt_Voltar.Size = new System.Drawing.Size(90, 27);
+            this.bt_Voltar.Size = new System.Drawing.Size(94, 39);
             this.bt_Voltar.TabIndex = 13;
             this.bt_Voltar.Text = "<-  &Voltar";
             this.bt_Voltar.UseVisualStyleBackColor = true;
@@ -172,9 +172,9 @@
             // 
             // bt_Salvar
             // 
-            this.bt_Salvar.Location = new System.Drawing.Point(789, 499);
+            this.bt_Salvar.Location = new System.Drawing.Point(785, 494);
             this.bt_Salvar.Name = "bt_Salvar";
-            this.bt_Salvar.Size = new System.Drawing.Size(90, 27);
+            this.bt_Salvar.Size = new System.Drawing.Size(94, 39);
             this.bt_Salvar.TabIndex = 27;
             this.bt_Salvar.Text = "&Salvar";
             this.bt_Salvar.UseVisualStyleBackColor = true;
@@ -193,8 +193,8 @@
             // estatísticaToolStripMenuItem
             // 
             this.estatísticaToolStripMenuItem.Name = "estatísticaToolStripMenuItem";
-            this.estatísticaToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.estatísticaToolStripMenuItem.Text = "&Estatística";
+            this.estatísticaToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.estatísticaToolStripMenuItem.Text = "&Estatísticas";
             this.estatísticaToolStripMenuItem.Click += new System.EventHandler(this.estatísticaToolStripMenuItem_Click);
             // 
             // frm_HS

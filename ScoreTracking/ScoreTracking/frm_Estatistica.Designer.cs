@@ -43,8 +43,11 @@
             this.lb_win_rate_geral = new System.Windows.Forms.Label();
             this.lb_partidas_geral = new System.Windows.Forms.Label();
             this.lb_geral = new System.Windows.Forms.Label();
+            this.mn_menu = new System.Windows.Forms.MenuStrip();
+            this.limparEstatisticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pn_por_heroi.SuspendLayout();
             this.pn_geral.SuspendLayout();
+            this.mn_menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // cb_por_heroi
@@ -78,7 +81,7 @@
             this.pn_por_heroi.Controls.Add(this.lb_heroi);
             this.pn_por_heroi.Location = new System.Drawing.Point(12, 39);
             this.pn_por_heroi.Name = "pn_por_heroi";
-            this.pn_por_heroi.Size = new System.Drawing.Size(303, 192);
+            this.pn_por_heroi.Size = new System.Drawing.Size(303, 147);
             this.pn_por_heroi.TabIndex = 2;
             // 
             // lb_val_win_rate_heroi
@@ -138,7 +141,7 @@
             this.pn_geral.Controls.Add(this.lb_geral);
             this.pn_geral.Location = new System.Drawing.Point(321, 39);
             this.pn_geral.Name = "pn_geral";
-            this.pn_geral.Size = new System.Drawing.Size(303, 192);
+            this.pn_geral.Size = new System.Drawing.Size(303, 147);
             this.pn_geral.TabIndex = 3;
             // 
             // lb_val_win_rate_geral
@@ -189,14 +192,33 @@
             this.lb_geral.TabIndex = 0;
             this.lb_geral.Text = "Estatística Geral";
             // 
+            // mn_menu
+            // 
+            this.mn_menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.limparEstatisticaToolStripMenuItem});
+            this.mn_menu.Location = new System.Drawing.Point(0, 0);
+            this.mn_menu.Name = "mn_menu";
+            this.mn_menu.Size = new System.Drawing.Size(633, 24);
+            this.mn_menu.TabIndex = 4;
+            this.mn_menu.Text = "menuStrip1";
+            // 
+            // limparEstatisticaToolStripMenuItem
+            // 
+            this.limparEstatisticaToolStripMenuItem.Name = "limparEstatisticaToolStripMenuItem";
+            this.limparEstatisticaToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
+            this.limparEstatisticaToolStripMenuItem.Text = "&Limpar Estatistica";
+            this.limparEstatisticaToolStripMenuItem.Click += new System.EventHandler(this.limparEstatisticaToolStripMenuItem_Click);
+            // 
             // frm_Estatistica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 280);
+            this.ClientSize = new System.Drawing.Size(633, 202);
             this.Controls.Add(this.pn_geral);
             this.Controls.Add(this.pn_por_heroi);
+            this.Controls.Add(this.mn_menu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.mn_menu;
             this.MaximizeBox = false;
             this.Name = "frm_Estatistica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -205,7 +227,10 @@
             this.pn_por_heroi.PerformLayout();
             this.pn_geral.ResumeLayout(false);
             this.pn_geral.PerformLayout();
+            this.mn_menu.ResumeLayout(false);
+            this.mn_menu.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -225,5 +250,7 @@
         private System.Windows.Forms.Label lb_num_partidas_heroi;
         private System.Windows.Forms.Label lb_val_win_rate_geral;
         private System.Windows.Forms.Label lb_num_partidas_geral;
+        private System.Windows.Forms.MenuStrip mn_menu;
+        private System.Windows.Forms.ToolStripMenuItem limparEstatisticaToolStripMenuItem;
     }
 }

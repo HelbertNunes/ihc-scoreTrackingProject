@@ -161,6 +161,16 @@ namespace ScoreTracking.Properties {
         }
         
         /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cataratas_do_jaguar {
+            get {
+                object obj = ResourceManager.GetObject("cataratas_do_jaguar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Androxus:Flanco
         ///Ash:Tanque
         ///Barik:Tanque
@@ -200,16 +210,6 @@ namespace ScoreTracking.Properties {
         internal static string champions_paladins {
             get {
                 return ResourceManager.GetString("champions_paladins", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap check {
-            get {
-                object obj = ResourceManager.GetObject("check", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -296,6 +296,16 @@ namespace ScoreTracking.Properties {
         internal static System.Drawing.Bitmap Guerreiro {
             get {
                 object obj = ResourceManager.GetObject("Guerreiro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ilha_dos_sapos {
+            get {
+                object obj = ResourceManager.GetObject("ilha_dos_sapos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -428,6 +438,26 @@ namespace ScoreTracking.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mercado_dos_peixes {
+            get {
+                object obj = ResourceManager.GetObject("mercado_dos_peixes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minas_de_gelo {
+            get {
+                object obj = ResourceManager.GetObject("minas_de_gelo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Moji {
             get {
                 object obj = ResourceManager.GetObject("Moji", resourceCulture);
@@ -448,9 +478,29 @@ namespace ScoreTracking.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pico_do_ascendido {
+            get {
+                object obj = ResourceManager.GetObject("pico_do_ascendido", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pip {
             get {
                 object obj = ResourceManager.GetObject("Pip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap praia_da_serpente {
+            get {
+                object obj = ResourceManager.GetObject("praia_da_serpente", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -491,6 +541,16 @@ namespace ScoreTracking.Properties {
         internal static System.Drawing.Bitmap Seris {
             get {
                 object obj = ResourceManager.GetObject("Seris", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap serraria_da_solidao {
+            get {
+                object obj = ResourceManager.GetObject("serraria_da_solidao", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
