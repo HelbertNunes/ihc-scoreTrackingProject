@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icons8-Ios7-Business-Ratings.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -152,6 +155,7 @@
     <None Include="Resources\900px-Battlefield_-_The_Grand_Tournament.jpg" />
     <None Include="Resources\Database\Paladins\maps_paladins.txt" />
     <None Include="Resources\check.png" />
+    <Content Include="Icons8-Ios7-Business-Ratings.ico" />
     <Content Include="Resources\Images\Paladins\Androxus.png" />
     <Content Include="Resources\Images\Paladins\Ash.png" />
     <Content Include="Resources\Images\Paladins\Barik.png" />

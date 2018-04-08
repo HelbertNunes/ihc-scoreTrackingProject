@@ -87,7 +87,7 @@
             // lb_val_win_rate_heroi
             // 
             this.lb_val_win_rate_heroi.AutoSize = true;
-            this.lb_val_win_rate_heroi.Location = new System.Drawing.Point(160, 109);
+            this.lb_val_win_rate_heroi.Location = new System.Drawing.Point(160, 107);
             this.lb_val_win_rate_heroi.Name = "lb_val_win_rate_heroi";
             this.lb_val_win_rate_heroi.Size = new System.Drawing.Size(10, 13);
             this.lb_val_win_rate_heroi.TabIndex = 5;
@@ -106,7 +106,7 @@
             // 
             this.lb_win_rate_heroi.AutoSize = true;
             this.lb_win_rate_heroi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_win_rate_heroi.Location = new System.Drawing.Point(28, 104);
+            this.lb_win_rate_heroi.Location = new System.Drawing.Point(18, 102);
             this.lb_win_rate_heroi.Name = "lb_win_rate_heroi";
             this.lb_win_rate_heroi.Size = new System.Drawing.Size(126, 20);
             this.lb_win_rate_heroi.TabIndex = 4;
@@ -147,7 +147,7 @@
             // lb_val_win_rate_geral
             // 
             this.lb_val_win_rate_geral.AutoSize = true;
-            this.lb_val_win_rate_geral.Location = new System.Drawing.Point(157, 109);
+            this.lb_val_win_rate_geral.Location = new System.Drawing.Point(157, 73);
             this.lb_val_win_rate_geral.Name = "lb_val_win_rate_geral";
             this.lb_val_win_rate_geral.Size = new System.Drawing.Size(10, 13);
             this.lb_val_win_rate_geral.TabIndex = 7;
@@ -156,7 +156,7 @@
             // lb_num_partidas_geral
             // 
             this.lb_num_partidas_geral.AutoSize = true;
-            this.lb_num_partidas_geral.Location = new System.Drawing.Point(157, 77);
+            this.lb_num_partidas_geral.Location = new System.Drawing.Point(157, 42);
             this.lb_num_partidas_geral.Name = "lb_num_partidas_geral";
             this.lb_num_partidas_geral.Size = new System.Drawing.Size(10, 13);
             this.lb_num_partidas_geral.TabIndex = 6;
@@ -166,7 +166,7 @@
             // 
             this.lb_win_rate_geral.AutoSize = true;
             this.lb_win_rate_geral.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_win_rate_geral.Location = new System.Drawing.Point(25, 104);
+            this.lb_win_rate_geral.Location = new System.Drawing.Point(15, 69);
             this.lb_win_rate_geral.Name = "lb_win_rate_geral";
             this.lb_win_rate_geral.Size = new System.Drawing.Size(126, 20);
             this.lb_win_rate_geral.TabIndex = 2;
@@ -176,7 +176,7 @@
             // 
             this.lb_partidas_geral.AutoSize = true;
             this.lb_partidas_geral.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_partidas_geral.Location = new System.Drawing.Point(15, 72);
+            this.lb_partidas_geral.Location = new System.Drawing.Point(15, 37);
             this.lb_partidas_geral.Name = "lb_partidas_geral";
             this.lb_partidas_geral.Size = new System.Drawing.Size(136, 20);
             this.lb_partidas_geral.TabIndex = 1;
