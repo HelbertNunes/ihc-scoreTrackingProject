@@ -107,7 +107,7 @@ namespace ScoreTracking
         {
             string[] infos;
 
-            foreach(var line in file.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries))
+            foreach(var line in file.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries))
             {
                 if (line.Contains(':'))
                 {
