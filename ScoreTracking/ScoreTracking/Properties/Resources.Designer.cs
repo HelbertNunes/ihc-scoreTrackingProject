@@ -353,16 +353,6 @@ namespace ScoreTracking.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap League_of_Legends_Icon {
-            get {
-                object obj = ResourceManager.GetObject("League_of_Legends_Icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Lex {
             get {
                 object obj = ResourceManager.GetObject("Lex", resourceCulture);
@@ -425,7 +415,7 @@ namespace ScoreTracking.Properties {
         ///Cataratas do Jaguar
         ///Praia da Serpente
         ///Mercado dos Peixes
-        ///Serraria da Solidão
+        ///Serraria da Solidao
         ///Minas de Gelo
         ///Pico do Ascendido.
         /// </summary>

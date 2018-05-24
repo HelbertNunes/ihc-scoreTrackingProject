@@ -9,8 +9,8 @@ namespace ScoreTracking
 {
     public class PartidaHS : Partida
     {
-        public PartidaHS(Vencedor vencedor, Champion_HS champion) 
-            : base(vencedor)
+        public PartidaHS(Vencedor vencedor, Champion_HS champion, DateTime dateTime) 
+            : base(vencedor, dateTime)
         {
             this.Seu_Heroi = champion;
         }

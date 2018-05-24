@@ -9,8 +9,8 @@ namespace ScoreTracking
 {
     public class PartidaPaladins : Partida
     {
-        public PartidaPaladins(Vencedor vencedor, Champion_Paladins champion, Champion_Paladins[] aliados, Champion_Paladins[] inimigos, int pontosAliado, int pontosInimigo,string mapa) 
-            : base(vencedor)
+        public PartidaPaladins(Vencedor vencedor, Champion_Paladins champion, Champion_Paladins[] aliados, Champion_Paladins[] inimigos, int pontosAliado, int pontosInimigo,string mapa, DateTime dateTime) 
+            : base(vencedor, dateTime)
         {
             this.Seu_Heroi = champion;
             this.pontosAliado = pontosAliado;

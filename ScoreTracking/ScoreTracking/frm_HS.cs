@@ -37,7 +37,8 @@ namespace ScoreTracking
         {
             if (!File.Exists(JSON_PATH))
             {
-                File.Create(JSON_PATH);
+                FileStream file = File.Create(JSON_PATH);
+                file.Close();
             }
 
             LeArquivo(Properties.Resources.classes);
@@ -113,7 +114,7 @@ namespace ScoreTracking
             Partida.Vencedor vencedor = (cb_vencedor.SelectedIndex == 0) ? Partida.Vencedor.Aliado : Partida.Vencedor.Inimigo;
             Champion_HS seu_heroi = (Champion_HS)cb_ally_hero.SelectedItem;
 
-            PartidaHS partida = new PartidaHS(vencedor, seu_heroi);
+            PartidaHS partida = new PartidaHS(vencedor, seu_heroi, DateTime.Now);
 
             List<PartidaHS> partidas = LeJSON();
 

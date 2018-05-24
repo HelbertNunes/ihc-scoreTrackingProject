@@ -74,6 +74,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pn_selecao_heroi = new System.Windows.Forms.Panel();
             this.pb_mapa = new System.Windows.Forms.PictureBox();
+            this.visualizarPartidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally3)).BeginInit();
@@ -470,7 +471,8 @@
             // mn_menu
             // 
             this.mn_menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.estatísticaToolStripMenuItem});
+            this.estatísticaToolStripMenuItem,
+            this.visualizarPartidaToolStripMenuItem});
             this.mn_menu.Location = new System.Drawing.Point(0, 0);
             this.mn_menu.Name = "mn_menu";
             this.mn_menu.Size = new System.Drawing.Size(942, 24);
@@ -510,6 +512,12 @@
             this.pb_mapa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_mapa.TabIndex = 43;
             this.pb_mapa.TabStop = false;
+            // 
+            // visualizarPartidaToolStripMenuItem
+            // 
+            this.visualizarPartidaToolStripMenuItem.Name = "visualizarPartidaToolStripMenuItem";
+            this.visualizarPartidaToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
+            this.visualizarPartidaToolStripMenuItem.Text = "&Visualizar Partida";
             // 
             // frm_Paladins
             // 
@@ -632,5 +640,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pn_selecao_heroi;
         private System.Windows.Forms.PictureBox pb_mapa;
+        private System.Windows.Forms.ToolStripMenuItem visualizarPartidaToolStripMenuItem;
     }
 }

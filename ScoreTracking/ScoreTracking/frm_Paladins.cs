@@ -32,7 +32,8 @@ namespace ScoreTracking
         {
             if (!File.Exists(JSON_PATH))
             {
-                File.Create(JSON_PATH);
+                FileStream file = File.Create(JSON_PATH);
+                file.Close();
             }
 
             LeArquivo(Properties.Resources.champions_paladins);
@@ -181,7 +182,7 @@ namespace ScoreTracking
 
             Partida.Vencedor vencedor = (pont_aliado > pont_inimigo) ? Partida.Vencedor.Aliado : Partida.Vencedor.Inimigo;
 
-            PartidaPaladins partida = new PartidaPaladins(vencedor, seu_heroi, aliados.ToArray(), inimigos.ToArray(), pont_aliado, pont_inimigo, mapa);
+            PartidaPaladins partida = new PartidaPaladins(vencedor, seu_heroi, aliados.ToArray(), inimigos.ToArray(), pont_aliado, pont_inimigo, mapa, DateTime.Now);
 
             List<PartidaPaladins> partidas = LeJSON();
 
