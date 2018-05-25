@@ -12,7 +12,7 @@ namespace ScoreTracking
         public PartidaHS(Vencedor vencedor, Champion_HS champion, DateTime dateTime) 
             : base(vencedor, dateTime)
         {
-            this.Seu_Heroi = champion;
+            this.SeuHeroi = champion;
         }
         
         private string deckOponente { get; set; }        

@@ -37,16 +37,23 @@
             // 
             // dataGridPartida
             // 
+            this.dataGridPartida.AllowUserToAddRows = false;
+            this.dataGridPartida.AllowUserToDeleteRows = false;
+            this.dataGridPartida.AllowUserToResizeRows = false;
+            this.dataGridPartida.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridPartida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridPartida.Location = new System.Drawing.Point(1, 63);
             this.dataGridPartida.Name = "dataGridPartida";
-            this.dataGridPartida.Size = new System.Drawing.Size(491, 255);
+            this.dataGridPartida.ReadOnly = true;
+            this.dataGridPartida.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridPartida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridPartida.Size = new System.Drawing.Size(620, 255);
             this.dataGridPartida.TabIndex = 0;
             // 
             // bt_Ok
             // 
             this.bt_Ok.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Ok.Location = new System.Drawing.Point(416, 324);
+            this.bt_Ok.Location = new System.Drawing.Point(542, 324);
             this.bt_Ok.Name = "bt_Ok";
             this.bt_Ok.Size = new System.Drawing.Size(66, 29);
             this.bt_Ok.TabIndex = 1;
@@ -67,7 +74,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 359);
+            this.ClientSize = new System.Drawing.Size(620, 359);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bt_Ok);
             this.Controls.Add(this.dataGridPartida);

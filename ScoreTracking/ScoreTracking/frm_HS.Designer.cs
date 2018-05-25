@@ -43,6 +43,7 @@
             this.bt_Salvar = new System.Windows.Forms.Button();
             this.mn_menu = new System.Windows.Forms.MenuStrip();
             this.estatísticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vizualizarPartidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_enemy)).BeginInit();
             this.mn_menu.SuspendLayout();
@@ -183,7 +184,8 @@
             // mn_menu
             // 
             this.mn_menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.estatísticaToolStripMenuItem});
+            this.estatísticaToolStripMenuItem,
+            this.vizualizarPartidaToolStripMenuItem});
             this.mn_menu.Location = new System.Drawing.Point(0, 0);
             this.mn_menu.Name = "mn_menu";
             this.mn_menu.Size = new System.Drawing.Size(891, 24);
@@ -196,6 +198,13 @@
             this.estatísticaToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.estatísticaToolStripMenuItem.Text = "&Estatísticas";
             this.estatísticaToolStripMenuItem.Click += new System.EventHandler(this.estatísticaToolStripMenuItem_Click);
+            // 
+            // vizualizarPartidaToolStripMenuItem
+            // 
+            this.vizualizarPartidaToolStripMenuItem.Name = "vizualizarPartidaToolStripMenuItem";
+            this.vizualizarPartidaToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
+            this.vizualizarPartidaToolStripMenuItem.Text = "&Vizualizar Partida";
+            this.vizualizarPartidaToolStripMenuItem.Click += new System.EventHandler(this.vizualizarPartidaToolStripMenuItem_Click);
             // 
             // frm_HS
             // 
@@ -248,5 +257,6 @@
         private System.Windows.Forms.Button bt_Salvar;
         private System.Windows.Forms.MenuStrip mn_menu;
         private System.Windows.Forms.ToolStripMenuItem estatísticaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vizualizarPartidaToolStripMenuItem;
     }
 }

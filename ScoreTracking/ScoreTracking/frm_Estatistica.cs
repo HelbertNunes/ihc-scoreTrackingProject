@@ -61,7 +61,7 @@ namespace ScoreTracking
             {
                 partidasHS = JsonConvert.DeserializeObject<List<PartidaHS>>(File.ReadAllText(JSON_HS_PATH), new JsonSerializerSettings() { Converters = converters });
 
-                if (partidasHS is null || partidasHS[0].Seu_Heroi is null) partidas = new List<Partida>();
+                if (partidasHS is null || partidasHS[0].SeuHeroi is null) partidas = new List<Partida>();
                 else
                 {
                     foreach(var partida in partidasHS)
@@ -74,7 +74,7 @@ namespace ScoreTracking
             {
                 partidasPaladins = JsonConvert.DeserializeObject<List<PartidaPaladins>>(File.ReadAllText(JSON_PALADINS_PATH), new JsonSerializerSettings() { Converters = converters });
 
-                if (partidasPaladins is null || partidasPaladins[0].Seu_Heroi is null) partidas = new List<Partida>();
+                if (partidasPaladins is null || partidasPaladins[0].SeuHeroi is null) partidas = new List<Partida>();
                 else
                 {
                     foreach (var partida in partidasPaladins)
@@ -87,11 +87,11 @@ namespace ScoreTracking
             Champion champion = (Champion)cb_por_heroi.SelectedItem;
 
             numPartidasGeral = partidas.Count;
-            numPartidasHeroi = partidas.Count(x => x.Seu_Heroi.Nome.Contains(champion.Nome));
+            numPartidasHeroi = partidas.Count(x => x.SeuHeroi.Nome.Contains(champion.Nome));
 
             double percent_Heroi = 0, percent_Geral = 0;
 
-            if (numPartidasHeroi != 0) percent_Heroi = (partidas.Count(x => x.Seu_Heroi.Nome.Contains(champion.Nome) && x.Ganhador == Partida.Vencedor.Aliado) / Convert.ToDouble(numPartidasHeroi)) * 100;
+            if (numPartidasHeroi != 0) percent_Heroi = (partidas.Count(x => x.SeuHeroi.Nome.Contains(champion.Nome) && x.Ganhador == Partida.Vencedor.Aliado) / Convert.ToDouble(numPartidasHeroi)) * 100;
 
             if (numPartidasGeral != 0) percent_Geral = (partidas.Count(x => x.Ganhador == Partida.Vencedor.Aliado) / Convert.ToDouble(numPartidasGeral)) * 100;
 
@@ -120,10 +120,10 @@ namespace ScoreTracking
         private void cb_por_heroi_SelectedIndexChanged(object sender, EventArgs e)
         {
             Champion champion = (Champion)cb_por_heroi.SelectedItem;
-            int numPartidasHeroi = partidas.Count(x => x.Seu_Heroi.Nome.Contains(champion.Nome));
+            int numPartidasHeroi = partidas.Count(x => x.SeuHeroi.Nome.Contains(champion.Nome));
             double percent_Heroi = 0;
 
-            if (numPartidasHeroi != 0) percent_Heroi = (partidas.Count(x => x.Seu_Heroi.Nome.Contains(champion.Nome) && x.Ganhador == Partida.Vencedor.Aliado) / Convert.ToDouble(numPartidasHeroi)) * 100;
+            if (numPartidasHeroi != 0) percent_Heroi = (partidas.Count(x => x.SeuHeroi.Nome.Contains(champion.Nome) && x.Ganhador == Partida.Vencedor.Aliado) / Convert.ToDouble(numPartidasHeroi)) * 100;
 
             lb_num_partidas_heroi.Text = numPartidasHeroi.ToString();
             lb_val_win_rate_heroi.Text = string.Format($"{percent_Heroi} %");

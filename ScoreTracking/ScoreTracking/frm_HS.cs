@@ -104,7 +104,7 @@ namespace ScoreTracking
             JsonConverter[] converters = { new ChampionConverter() };
             List<PartidaHS> partidas = JsonConvert.DeserializeObject<List<PartidaHS>>(File.ReadAllText(JSON_PATH), new JsonSerializerSettings() { Converters = converters });
 
-            if (partidas is null || partidas[0].Seu_Heroi is null) partidas = new List<PartidaHS>();
+            if (partidas is null || partidas[0].SeuHeroi is null) partidas = new List<PartidaHS>();
 
             return partidas;
         }
@@ -130,6 +130,17 @@ namespace ScoreTracking
         {
             Form formEstatistica = new frm_Estatistica(this);
             formEstatistica.ShowDialog();
+        }
+
+        public void PreenchePartida(Partida partida)
+        {
+
+        }
+
+        private void vizualizarPartidaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmSelecao = new frmSelecao(PreenchePartida, this);
+            frmSelecao.ShowDialog();
         }
     }
 }

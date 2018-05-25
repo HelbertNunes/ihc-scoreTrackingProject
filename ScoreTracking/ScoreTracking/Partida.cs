@@ -12,19 +12,19 @@ namespace ScoreTracking
         protected Partida(Vencedor vencedor, DateTime dateTime)
         {            
             this.Ganhador = vencedor;
-            this.dataHoraSalva = dateTime;
+            this.DataHora = dateTime;
         }
 
         [JsonProperty]
         public Vencedor Ganhador { get; protected set; }
         [JsonProperty]
-        public Champion Seu_Heroi { get; protected set; }
+        public Champion SeuHeroi { get; protected set; }
         [JsonProperty]
-        public DateTime dataHoraSalva { get; protected set; }
+        public DateTime DataHora { get; protected set; }
         public enum Vencedor
         {
             Aliado,
             Inimigo
-        };
+        };      
     }        
 }

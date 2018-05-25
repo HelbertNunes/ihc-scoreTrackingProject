@@ -214,5 +214,16 @@ namespace ScoreTracking
         {            
             pb_mapa.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject((cb_mapa.SelectedItem as string).ToLower().Replace(" ", "_"));
         }
+
+        private void visualizarPartidaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmSelecao = new frmSelecao(PreenchePartida, this);
+            frmSelecao.ShowDialog();
+        }
+
+        public void PreenchePartida(Partida partida)
+        {
+
+        }
     }
 }

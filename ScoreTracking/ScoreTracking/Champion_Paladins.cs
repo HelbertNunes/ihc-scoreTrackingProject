@@ -24,5 +24,10 @@ namespace ScoreTracking
             ResourceManager rm = Properties.Resources.ResourceManager;            
             return (rm.GetObject(this.Nome.Contains("'") ? this.Nome.Replace("'","_") : this.Nome )as Bitmap);
         }
+
+        public override string ToString()
+        {
+            return this.Nome;
+        }
     }
 }

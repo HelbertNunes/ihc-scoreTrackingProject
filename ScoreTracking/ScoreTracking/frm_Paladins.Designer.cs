@@ -71,10 +71,10 @@
             this.bt_Salvar = new System.Windows.Forms.Button();
             this.mn_menu = new System.Windows.Forms.MenuStrip();
             this.estatísticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.visualizarPartidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pn_selecao_heroi = new System.Windows.Forms.Panel();
             this.pb_mapa = new System.Windows.Forms.PictureBox();
-            this.visualizarPartidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally3)).BeginInit();
@@ -486,6 +486,13 @@
             this.estatísticaToolStripMenuItem.Text = "&Estatísticas";
             this.estatísticaToolStripMenuItem.Click += new System.EventHandler(this.estatísticaToolStripMenuItem_Click);
             // 
+            // visualizarPartidaToolStripMenuItem
+            // 
+            this.visualizarPartidaToolStripMenuItem.Name = "visualizarPartidaToolStripMenuItem";
+            this.visualizarPartidaToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
+            this.visualizarPartidaToolStripMenuItem.Text = "&Visualizar Partida";
+            this.visualizarPartidaToolStripMenuItem.Click += new System.EventHandler(this.visualizarPartidaToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -512,12 +519,6 @@
             this.pb_mapa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_mapa.TabIndex = 43;
             this.pb_mapa.TabStop = false;
-            // 
-            // visualizarPartidaToolStripMenuItem
-            // 
-            this.visualizarPartidaToolStripMenuItem.Name = "visualizarPartidaToolStripMenuItem";
-            this.visualizarPartidaToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
-            this.visualizarPartidaToolStripMenuItem.Text = "&Visualizar Partida";
             // 
             // frm_Paladins
             // 

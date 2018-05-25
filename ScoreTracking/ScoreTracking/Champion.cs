@@ -25,6 +25,6 @@ namespace ScoreTracking
         [JsonProperty]
         public string Classe { get; protected set; }
 
-        public abstract Bitmap GetImage();
+        public abstract Bitmap GetImage();      
     }
 }
