@@ -19,13 +19,16 @@ namespace ScoreTracking
         private Control.ControlCollection form_Controls;
         private Champion_Paladins seu_heroi;
         private const string JSON_PATH = @".\partidas_paladins.json";
+        private PartidaPaladins partida;
+        private List<PartidaPaladins> partidas;
         Form formMenu;        
 
         public frm_Paladins(Form form)
         {
             InitializeComponent();
             PreencheCampos();
-            formMenu = form;            
+            formMenu = form;
+            partidas = LeJSON();
         }
 
         private void PreencheCampos()
@@ -108,7 +111,7 @@ namespace ScoreTracking
         {
             string[] infos;
 
-            foreach(var line in file.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries))
+            foreach(var line in file.Split(new string[] { "\n", "\r" }, StringSplitOptions.RemoveEmptyEntries))
             {
                 if (line.Contains(':'))
                 {
@@ -182,15 +185,21 @@ namespace ScoreTracking
 
             Partida.Vencedor vencedor = (pont_aliado > pont_inimigo) ? Partida.Vencedor.Aliado : Partida.Vencedor.Inimigo;
 
-            PartidaPaladins partida = new PartidaPaladins(vencedor, seu_heroi, aliados.ToArray(), inimigos.ToArray(), pont_aliado, pont_inimigo, mapa, DateTime.Now);
+            
 
-            List<PartidaPaladins> partidas = LeJSON();
+            if (this.partida == null)
+                this.partida = new PartidaPaladins(vencedor, seu_heroi, aliados.ToArray(), inimigos.ToArray(), pont_aliado, pont_inimigo, mapa, DateTime.Now);
+            else
+            {
+                partidas.Remove(partida);
+                this.partida.Altera(vencedor, seu_heroi, aliados.ToArray(), inimigos.ToArray(), pont_aliado, pont_inimigo, mapa);
+            }            
 
-            partidas.Add(partida);
+            partidas.Add(this.partida);
 
             File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
 
-            Form alert = new frm_Notification("Salvo com sucesso");
+            Form alert = new frm_NotificationOK("Salvo com sucesso");
             alert.ShowDialog();
         }
 
@@ -217,13 +226,55 @@ namespace ScoreTracking
 
         private void visualizarPartidaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frmSelecao = new frmSelecao(PreenchePartida, this);
+            Form frmSelecao = new frm_Selecao(PreenchePartida, this);
             frmSelecao.ShowDialog();
         }
 
-        public void PreenchePartida(Partida partida)
+        public void PreenchePartida(PartidaPaladins partida)
         {
+            this.partida = partida;
+            deleteStripButton.Visible = true;
 
+            List<ComboBox> comboBoxes_ally = form_Controls.OfType<ComboBox>().ToList().Where(x => x.Name.Contains("ally")).ToList();
+            List<ComboBox> comboBoxes_enemy = form_Controls.OfType<ComboBox>().ToList().Where(x => x.Name.Contains("enemy")).ToList();
+
+            int i = 0;
+
+            foreach(Champion_Paladins champion in partida.Time_Aliado)
+            {
+                comboBoxes_ally[i].SelectedIndex = champions.FindIndex(x => x.Nome == champion.Nome);
+                if (champion == partida.SeuHeroi)
+                    SelecionaHeroi(form_Controls.OfType<PictureBox>().ToList().Where(x => x.Name.Contains(comboBoxes_ally[i].Name.Substring(3))).ToList(), new EventArgs());
+                i++;
+            }
+
+            i = 0;
+
+            foreach (Champion_Paladins champion in partida.Time_Inimigo)
+            {
+                comboBoxes_enemy[i].SelectedIndex = champions.FindIndex(x => x.Nome == champion.Nome);
+                i++;
+            }
+
+            cb_mapa.SelectedItem = partida.Mapa;
+            mtxb_ally_points.Text = partida.pontosAliado.ToString();
+            mtxb_enemy_points.Text = partida.pontosInimigo.ToString();
+        }
+
+        private void novoStripButton_Click(object sender, EventArgs e)
+        {
+            PreencheCampos();
+            deleteStripButton.Visible = false;
+            mtxb_ally_points.Text = "";
+            mtxb_enemy_points.Text = "";
+            this.partida = null;
+        }
+
+        private void deleteStripButton_Click(object sender, EventArgs e)
+        {
+            partidas.RemoveAt(partidas.FindIndex(x => x.DataHora == partida.DataHora));
+            File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
+            PreencheCampos();
         }
     }
 }

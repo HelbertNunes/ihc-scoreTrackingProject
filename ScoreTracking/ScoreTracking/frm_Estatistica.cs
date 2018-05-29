@@ -136,7 +136,7 @@ namespace ScoreTracking
             else
                 File.WriteAllText(JSON_PALADINS_PATH, string.Empty);
 
-            Form notification = new frm_Notification("Estatísticas foram reiniciadas");
+            Form notification = new frm_NotificationOK("Estatísticas foram reiniciadas");
             notification.Show();
             CalculaEstatistica();
         }

@@ -56,11 +56,17 @@
     <Compile Include="ChampionConverter.cs" />
     <Compile Include="Champion_HS.cs" />
     <Compile Include="Champion_Paladins.cs" />
-    <Compile Include="frmSelecao.cs">
+    <Compile Include="frm_NotificationDel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSelecao.Designer.cs">
-      <DependentUpon>frmSelecao.cs</DependentUpon>
+    <Compile Include="frm_NotificationDel.Designer.cs">
+      <DependentUpon>frm_NotificationDel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Selecao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Selecao.Designer.cs">
+      <DependentUpon>frm_Selecao.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Estatistica.cs">
       <SubType>Form</SubType>
@@ -80,11 +86,11 @@
     <Compile Include="frm_Menu.Designer.cs">
       <DependentUpon>frm_Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Notification.cs">
+    <Compile Include="frm_NotificationOK.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Notification.Designer.cs">
-      <DependentUpon>frm_Notification.cs</DependentUpon>
+    <Compile Include="frm_NotificationOK.Designer.cs">
+      <DependentUpon>frm_NotificationOK.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Paladins.cs">
       <SubType>Form</SubType>
@@ -98,8 +104,11 @@
     <Compile Include="Champion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmSelecao.resx">
-      <DependentUpon>frmSelecao.cs</DependentUpon>
+    <EmbeddedResource Include="frm_NotificationDel.resx">
+      <DependentUpon>frm_NotificationDel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Selecao.resx">
+      <DependentUpon>frm_Selecao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Estatistica.resx">
       <DependentUpon>frm_Estatistica.cs</DependentUpon>
@@ -110,8 +119,8 @@
     <EmbeddedResource Include="frm_Menu.resx">
       <DependentUpon>frm_Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Notification.resx">
-      <DependentUpon>frm_Notification.cs</DependentUpon>
+    <EmbeddedResource Include="frm_NotificationOK.resx">
+      <DependentUpon>frm_NotificationOK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Paladins.resx">
       <DependentUpon>frm_Paladins.cs</DependentUpon>
@@ -150,6 +159,7 @@
     <None Include="Resources\qJY7LuHX_400x400.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\New-file-icon.png" />
     <None Include="Resources\Database\Paladins\champions_paladins.txt" />
     <None Include="Resources\Images\HS\Bruxo.png" />
     <None Include="Resources\Images\HS\Caçador.png" />
@@ -165,6 +175,7 @@
     <None Include="Resources\Database\Paladins\maps_paladins.txt" />
     <None Include="Resources\check.png" />
     <Content Include="Icons8-Ios7-Business-Ratings.ico" />
+    <None Include="Resources\delete-icon.png" />
     <Content Include="Resources\Images\Paladins\Androxus.png" />
     <Content Include="Resources\Images\Paladins\Ash.png" />
     <Content Include="Resources\Images\Paladins\Barik.png" />

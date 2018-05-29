@@ -75,6 +75,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pn_selecao_heroi = new System.Windows.Forms.Panel();
             this.pb_mapa = new System.Windows.Forms.PictureBox();
+            this.tsAtalho = new System.Windows.Forms.ToolStrip();
+            this.novoStripButton = new System.Windows.Forms.ToolStripButton();
+            this.abrirToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.deleteStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally3)).BeginInit();
@@ -87,11 +91,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_enemy1)).BeginInit();
             this.mn_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_mapa)).BeginInit();
+            this.tsAtalho.SuspendLayout();
             this.SuspendLayout();
             // 
             // pb_ally1
             // 
-            this.pb_ally1.Location = new System.Drawing.Point(149, 87);
+            this.pb_ally1.Location = new System.Drawing.Point(149, 91);
             this.pb_ally1.Name = "pb_ally1";
             this.pb_ally1.Size = new System.Drawing.Size(123, 85);
             this.pb_ally1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -112,7 +117,7 @@
             // 
             // pb_ally2
             // 
-            this.pb_ally2.Location = new System.Drawing.Point(149, 194);
+            this.pb_ally2.Location = new System.Drawing.Point(149, 198);
             this.pb_ally2.Name = "pb_ally2";
             this.pb_ally2.Size = new System.Drawing.Size(123, 85);
             this.pb_ally2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,7 +127,7 @@
             // 
             // pb_ally3
             // 
-            this.pb_ally3.Location = new System.Drawing.Point(149, 306);
+            this.pb_ally3.Location = new System.Drawing.Point(149, 310);
             this.pb_ally3.Name = "pb_ally3";
             this.pb_ally3.Size = new System.Drawing.Size(123, 85);
             this.pb_ally3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,7 +137,7 @@
             // 
             // pb_ally4
             // 
-            this.pb_ally4.Location = new System.Drawing.Point(149, 417);
+            this.pb_ally4.Location = new System.Drawing.Point(149, 421);
             this.pb_ally4.Name = "pb_ally4";
             this.pb_ally4.Size = new System.Drawing.Size(123, 85);
             this.pb_ally4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -142,7 +147,7 @@
             // 
             // pb_ally5
             // 
-            this.pb_ally5.Location = new System.Drawing.Point(149, 530);
+            this.pb_ally5.Location = new System.Drawing.Point(149, 534);
             this.pb_ally5.Name = "pb_ally5";
             this.pb_ally5.Size = new System.Drawing.Size(123, 85);
             this.pb_ally5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -154,7 +159,7 @@
             // 
             this.cb_ally1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_ally1.FormattingEnabled = true;
-            this.cb_ally1.Location = new System.Drawing.Point(6, 114);
+            this.cb_ally1.Location = new System.Drawing.Point(6, 118);
             this.cb_ally1.Name = "cb_ally1";
             this.cb_ally1.Size = new System.Drawing.Size(127, 21);
             this.cb_ally1.TabIndex = 6;
@@ -163,7 +168,7 @@
             // 
             this.cb_ally2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_ally2.FormattingEnabled = true;
-            this.cb_ally2.Location = new System.Drawing.Point(6, 226);
+            this.cb_ally2.Location = new System.Drawing.Point(6, 230);
             this.cb_ally2.Name = "cb_ally2";
             this.cb_ally2.Size = new System.Drawing.Size(127, 21);
             this.cb_ally2.TabIndex = 7;
@@ -172,7 +177,7 @@
             // 
             this.cb_ally3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_ally3.FormattingEnabled = true;
-            this.cb_ally3.Location = new System.Drawing.Point(6, 335);
+            this.cb_ally3.Location = new System.Drawing.Point(6, 339);
             this.cb_ally3.Name = "cb_ally3";
             this.cb_ally3.Size = new System.Drawing.Size(127, 21);
             this.cb_ally3.TabIndex = 8;
@@ -181,7 +186,7 @@
             // 
             this.cb_ally4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_ally4.FormattingEnabled = true;
-            this.cb_ally4.Location = new System.Drawing.Point(6, 444);
+            this.cb_ally4.Location = new System.Drawing.Point(6, 448);
             this.cb_ally4.Name = "cb_ally4";
             this.cb_ally4.Size = new System.Drawing.Size(127, 21);
             this.cb_ally4.TabIndex = 9;
@@ -190,7 +195,7 @@
             // 
             this.cb_ally5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_ally5.FormattingEnabled = true;
-            this.cb_ally5.Location = new System.Drawing.Point(6, 560);
+            this.cb_ally5.Location = new System.Drawing.Point(6, 564);
             this.cb_ally5.Name = "cb_ally5";
             this.cb_ally5.Size = new System.Drawing.Size(127, 21);
             this.cb_ally5.TabIndex = 10;
@@ -199,7 +204,7 @@
             // 
             this.cb_enemy5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_enemy5.FormattingEnabled = true;
-            this.cb_enemy5.Location = new System.Drawing.Point(802, 560);
+            this.cb_enemy5.Location = new System.Drawing.Point(802, 564);
             this.cb_enemy5.Name = "cb_enemy5";
             this.cb_enemy5.Size = new System.Drawing.Size(127, 21);
             this.cb_enemy5.TabIndex = 21;
@@ -208,7 +213,7 @@
             // 
             this.cb_enemy4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_enemy4.FormattingEnabled = true;
-            this.cb_enemy4.Location = new System.Drawing.Point(802, 444);
+            this.cb_enemy4.Location = new System.Drawing.Point(802, 448);
             this.cb_enemy4.Name = "cb_enemy4";
             this.cb_enemy4.Size = new System.Drawing.Size(127, 21);
             this.cb_enemy4.TabIndex = 20;
@@ -217,7 +222,7 @@
             // 
             this.cb_enemy3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_enemy3.FormattingEnabled = true;
-            this.cb_enemy3.Location = new System.Drawing.Point(802, 335);
+            this.cb_enemy3.Location = new System.Drawing.Point(802, 339);
             this.cb_enemy3.Name = "cb_enemy3";
             this.cb_enemy3.Size = new System.Drawing.Size(127, 21);
             this.cb_enemy3.TabIndex = 19;
@@ -226,7 +231,7 @@
             // 
             this.cb_enemy2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_enemy2.FormattingEnabled = true;
-            this.cb_enemy2.Location = new System.Drawing.Point(802, 226);
+            this.cb_enemy2.Location = new System.Drawing.Point(802, 230);
             this.cb_enemy2.Name = "cb_enemy2";
             this.cb_enemy2.Size = new System.Drawing.Size(127, 21);
             this.cb_enemy2.TabIndex = 18;
@@ -235,14 +240,14 @@
             // 
             this.cb_enemy1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_enemy1.FormattingEnabled = true;
-            this.cb_enemy1.Location = new System.Drawing.Point(802, 114);
+            this.cb_enemy1.Location = new System.Drawing.Point(802, 118);
             this.cb_enemy1.Name = "cb_enemy1";
             this.cb_enemy1.Size = new System.Drawing.Size(127, 21);
             this.cb_enemy1.TabIndex = 17;
             // 
             // pb_enemy5
             // 
-            this.pb_enemy5.Location = new System.Drawing.Point(673, 530);
+            this.pb_enemy5.Location = new System.Drawing.Point(673, 534);
             this.pb_enemy5.Name = "pb_enemy5";
             this.pb_enemy5.Size = new System.Drawing.Size(123, 85);
             this.pb_enemy5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -251,7 +256,7 @@
             // 
             // pb_enemy4
             // 
-            this.pb_enemy4.Location = new System.Drawing.Point(673, 417);
+            this.pb_enemy4.Location = new System.Drawing.Point(673, 421);
             this.pb_enemy4.Name = "pb_enemy4";
             this.pb_enemy4.Size = new System.Drawing.Size(123, 85);
             this.pb_enemy4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -260,7 +265,7 @@
             // 
             // pb_enemy3
             // 
-            this.pb_enemy3.Location = new System.Drawing.Point(673, 306);
+            this.pb_enemy3.Location = new System.Drawing.Point(673, 310);
             this.pb_enemy3.Name = "pb_enemy3";
             this.pb_enemy3.Size = new System.Drawing.Size(123, 85);
             this.pb_enemy3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -269,7 +274,7 @@
             // 
             // pb_enemy2
             // 
-            this.pb_enemy2.Location = new System.Drawing.Point(673, 194);
+            this.pb_enemy2.Location = new System.Drawing.Point(673, 198);
             this.pb_enemy2.Name = "pb_enemy2";
             this.pb_enemy2.Size = new System.Drawing.Size(123, 85);
             this.pb_enemy2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -289,7 +294,7 @@
             // 
             // pb_enemy1
             // 
-            this.pb_enemy1.Location = new System.Drawing.Point(673, 87);
+            this.pb_enemy1.Location = new System.Drawing.Point(673, 91);
             this.pb_enemy1.Name = "pb_enemy1";
             this.pb_enemy1.Size = new System.Drawing.Size(123, 85);
             this.pb_enemy1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -300,7 +305,7 @@
             // 
             this.lb_mapa.AutoSize = true;
             this.lb_mapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_mapa.Location = new System.Drawing.Point(378, 88);
+            this.lb_mapa.Location = new System.Drawing.Point(378, 92);
             this.lb_mapa.Name = "lb_mapa";
             this.lb_mapa.Size = new System.Drawing.Size(58, 20);
             this.lb_mapa.TabIndex = 22;
@@ -310,7 +315,7 @@
             // 
             this.cb_mapa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_mapa.FormattingEnabled = true;
-            this.cb_mapa.Location = new System.Drawing.Point(442, 87);
+            this.cb_mapa.Location = new System.Drawing.Point(442, 91);
             this.cb_mapa.Name = "cb_mapa";
             this.cb_mapa.Size = new System.Drawing.Size(121, 21);
             this.cb_mapa.TabIndex = 23;
@@ -319,7 +324,7 @@
             // lb_ally1_class
             // 
             this.lb_ally1_class.AutoSize = true;
-            this.lb_ally1_class.Location = new System.Drawing.Point(8, 142);
+            this.lb_ally1_class.Location = new System.Drawing.Point(8, 146);
             this.lb_ally1_class.Name = "lb_ally1_class";
             this.lb_ally1_class.Size = new System.Drawing.Size(10, 13);
             this.lb_ally1_class.TabIndex = 24;
@@ -328,7 +333,7 @@
             // mtxb_ally_points
             // 
             this.mtxb_ally_points.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxb_ally_points.Location = new System.Drawing.Point(419, 342);
+            this.mtxb_ally_points.Location = new System.Drawing.Point(419, 346);
             this.mtxb_ally_points.Mask = "0";
             this.mtxb_ally_points.Name = "mtxb_ally_points";
             this.mtxb_ally_points.Size = new System.Drawing.Size(36, 26);
@@ -339,7 +344,7 @@
             // mtxb_enemy_points
             // 
             this.mtxb_enemy_points.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxb_enemy_points.Location = new System.Drawing.Point(495, 342);
+            this.mtxb_enemy_points.Location = new System.Drawing.Point(495, 346);
             this.mtxb_enemy_points.Mask = "0";
             this.mtxb_enemy_points.Name = "mtxb_enemy_points";
             this.mtxb_enemy_points.Size = new System.Drawing.Size(35, 26);
@@ -351,7 +356,7 @@
             // 
             this.lb_vs.AutoSize = true;
             this.lb_vs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_vs.Location = new System.Drawing.Point(464, 344);
+            this.lb_vs.Location = new System.Drawing.Point(464, 348);
             this.lb_vs.Name = "lb_vs";
             this.lb_vs.Size = new System.Drawing.Size(20, 20);
             this.lb_vs.TabIndex = 27;
@@ -361,7 +366,7 @@
             // 
             this.lb_pontuacao.AutoSize = true;
             this.lb_pontuacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_pontuacao.Location = new System.Drawing.Point(415, 306);
+            this.lb_pontuacao.Location = new System.Drawing.Point(415, 310);
             this.lb_pontuacao.Name = "lb_pontuacao";
             this.lb_pontuacao.Size = new System.Drawing.Size(135, 24);
             this.lb_pontuacao.TabIndex = 28;
@@ -370,7 +375,7 @@
             // lb_ally2_class
             // 
             this.lb_ally2_class.AutoSize = true;
-            this.lb_ally2_class.Location = new System.Drawing.Point(8, 250);
+            this.lb_ally2_class.Location = new System.Drawing.Point(8, 254);
             this.lb_ally2_class.Name = "lb_ally2_class";
             this.lb_ally2_class.Size = new System.Drawing.Size(10, 13);
             this.lb_ally2_class.TabIndex = 29;
@@ -379,7 +384,7 @@
             // lb_ally3_class
             // 
             this.lb_ally3_class.AutoSize = true;
-            this.lb_ally3_class.Location = new System.Drawing.Point(8, 359);
+            this.lb_ally3_class.Location = new System.Drawing.Point(8, 363);
             this.lb_ally3_class.Name = "lb_ally3_class";
             this.lb_ally3_class.Size = new System.Drawing.Size(10, 13);
             this.lb_ally3_class.TabIndex = 30;
@@ -388,7 +393,7 @@
             // lb_ally4_class
             // 
             this.lb_ally4_class.AutoSize = true;
-            this.lb_ally4_class.Location = new System.Drawing.Point(8, 468);
+            this.lb_ally4_class.Location = new System.Drawing.Point(8, 472);
             this.lb_ally4_class.Name = "lb_ally4_class";
             this.lb_ally4_class.Size = new System.Drawing.Size(10, 13);
             this.lb_ally4_class.TabIndex = 31;
@@ -397,7 +402,7 @@
             // lb_ally5_class
             // 
             this.lb_ally5_class.AutoSize = true;
-            this.lb_ally5_class.Location = new System.Drawing.Point(8, 584);
+            this.lb_ally5_class.Location = new System.Drawing.Point(8, 588);
             this.lb_ally5_class.Name = "lb_ally5_class";
             this.lb_ally5_class.Size = new System.Drawing.Size(10, 13);
             this.lb_ally5_class.TabIndex = 32;
@@ -406,7 +411,7 @@
             // lb_enemy1_class
             // 
             this.lb_enemy1_class.AutoSize = true;
-            this.lb_enemy1_class.Location = new System.Drawing.Point(802, 142);
+            this.lb_enemy1_class.Location = new System.Drawing.Point(802, 146);
             this.lb_enemy1_class.Name = "lb_enemy1_class";
             this.lb_enemy1_class.Size = new System.Drawing.Size(10, 13);
             this.lb_enemy1_class.TabIndex = 33;
@@ -415,7 +420,7 @@
             // lb_enemy2_class
             // 
             this.lb_enemy2_class.AutoSize = true;
-            this.lb_enemy2_class.Location = new System.Drawing.Point(802, 250);
+            this.lb_enemy2_class.Location = new System.Drawing.Point(802, 254);
             this.lb_enemy2_class.Name = "lb_enemy2_class";
             this.lb_enemy2_class.Size = new System.Drawing.Size(10, 13);
             this.lb_enemy2_class.TabIndex = 34;
@@ -424,7 +429,7 @@
             // lb_enemy3_class
             // 
             this.lb_enemy3_class.AutoSize = true;
-            this.lb_enemy3_class.Location = new System.Drawing.Point(802, 359);
+            this.lb_enemy3_class.Location = new System.Drawing.Point(802, 363);
             this.lb_enemy3_class.Name = "lb_enemy3_class";
             this.lb_enemy3_class.Size = new System.Drawing.Size(10, 13);
             this.lb_enemy3_class.TabIndex = 35;
@@ -433,7 +438,7 @@
             // lb_enemy4_class
             // 
             this.lb_enemy4_class.AutoSize = true;
-            this.lb_enemy4_class.Location = new System.Drawing.Point(802, 468);
+            this.lb_enemy4_class.Location = new System.Drawing.Point(802, 472);
             this.lb_enemy4_class.Name = "lb_enemy4_class";
             this.lb_enemy4_class.Size = new System.Drawing.Size(10, 13);
             this.lb_enemy4_class.TabIndex = 36;
@@ -442,7 +447,7 @@
             // lb_enemy5_class
             // 
             this.lb_enemy5_class.AutoSize = true;
-            this.lb_enemy5_class.Location = new System.Drawing.Point(802, 584);
+            this.lb_enemy5_class.Location = new System.Drawing.Point(802, 588);
             this.lb_enemy5_class.Name = "lb_enemy5_class";
             this.lb_enemy5_class.Size = new System.Drawing.Size(10, 13);
             this.lb_enemy5_class.TabIndex = 37;
@@ -450,7 +455,7 @@
             // 
             // bt_Voltar
             // 
-            this.bt_Voltar.Location = new System.Drawing.Point(11, 648);
+            this.bt_Voltar.Location = new System.Drawing.Point(11, 652);
             this.bt_Voltar.Name = "bt_Voltar";
             this.bt_Voltar.Size = new System.Drawing.Size(94, 39);
             this.bt_Voltar.TabIndex = 38;
@@ -460,7 +465,7 @@
             // 
             // bt_Salvar
             // 
-            this.bt_Salvar.Location = new System.Drawing.Point(835, 648);
+            this.bt_Salvar.Location = new System.Drawing.Point(835, 652);
             this.bt_Salvar.Name = "bt_Salvar";
             this.bt_Salvar.Size = new System.Drawing.Size(94, 39);
             this.bt_Salvar.TabIndex = 39;
@@ -497,7 +502,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(120, 44);
+            this.label1.Location = new System.Drawing.Point(120, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 18);
             this.label1.TabIndex = 41;
@@ -506,25 +511,71 @@
             // pn_selecao_heroi
             // 
             this.pn_selecao_heroi.BackColor = System.Drawing.Color.Red;
-            this.pn_selecao_heroi.Location = new System.Drawing.Point(139, 78);
+            this.pn_selecao_heroi.Location = new System.Drawing.Point(139, 82);
             this.pn_selecao_heroi.Name = "pn_selecao_heroi";
             this.pn_selecao_heroi.Size = new System.Drawing.Size(143, 105);
             this.pn_selecao_heroi.TabIndex = 42;
             // 
             // pb_mapa
             // 
-            this.pb_mapa.Location = new System.Drawing.Point(321, 122);
+            this.pb_mapa.Location = new System.Drawing.Point(321, 126);
             this.pb_mapa.Name = "pb_mapa";
             this.pb_mapa.Size = new System.Drawing.Size(325, 181);
             this.pb_mapa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_mapa.TabIndex = 43;
             this.pb_mapa.TabStop = false;
             // 
+            // tsAtalho
+            // 
+            this.tsAtalho.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novoStripButton,
+            this.abrirToolStripButton,
+            this.deleteStripButton});
+            this.tsAtalho.Location = new System.Drawing.Point(0, 24);
+            this.tsAtalho.Name = "tsAtalho";
+            this.tsAtalho.Size = new System.Drawing.Size(942, 25);
+            this.tsAtalho.TabIndex = 44;
+            this.tsAtalho.Text = "toolStrip1";
+            // 
+            // novoStripButton
+            // 
+            this.novoStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.novoStripButton.Image = global::ScoreTracking.Properties.Resources.New_file_icon;
+            this.novoStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.novoStripButton.Name = "novoStripButton";
+            this.novoStripButton.Size = new System.Drawing.Size(23, 22);
+            this.novoStripButton.Text = "Novo";
+            this.novoStripButton.ToolTipText = "Novo";
+            this.novoStripButton.Click += new System.EventHandler(this.novoStripButton_Click);
+            // 
+            // abrirToolStripButton
+            // 
+            this.abrirToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.abrirToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("abrirToolStripButton.Image")));
+            this.abrirToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.abrirToolStripButton.Name = "abrirToolStripButton";
+            this.abrirToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.abrirToolStripButton.Text = "&Abrir";
+            this.abrirToolStripButton.Click += new System.EventHandler(this.visualizarPartidaToolStripMenuItem_Click);
+            // 
+            // deleteStripButton
+            // 
+            this.deleteStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.deleteStripButton.Image = global::ScoreTracking.Properties.Resources.delete_icon;
+            this.deleteStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.deleteStripButton.Name = "deleteStripButton";
+            this.deleteStripButton.Size = new System.Drawing.Size(23, 22);
+            this.deleteStripButton.Text = "Deleta";
+            this.deleteStripButton.ToolTipText = "Deleta";
+            this.deleteStripButton.Visible = false;
+            this.deleteStripButton.Click += new System.EventHandler(this.deleteStripButton_Click);
+            // 
             // frm_Paladins
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 695);
+            this.Controls.Add(this.tsAtalho);
             this.Controls.Add(this.pb_mapa);
             this.Controls.Add(this.pn_selecao_heroi);
             this.Controls.Add(this.label1);
@@ -589,6 +640,8 @@
             this.mn_menu.ResumeLayout(false);
             this.mn_menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_mapa)).EndInit();
+            this.tsAtalho.ResumeLayout(false);
+            this.tsAtalho.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -642,5 +695,9 @@
         private System.Windows.Forms.Panel pn_selecao_heroi;
         private System.Windows.Forms.PictureBox pb_mapa;
         private System.Windows.Forms.ToolStripMenuItem visualizarPartidaToolStripMenuItem;
+        private System.Windows.Forms.ToolStrip tsAtalho;
+        private System.Windows.Forms.ToolStripButton novoStripButton;
+        private System.Windows.Forms.ToolStripButton abrirToolStripButton;
+        private System.Windows.Forms.ToolStripButton deleteStripButton;
     }
 }

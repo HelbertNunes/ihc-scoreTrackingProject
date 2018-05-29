@@ -1,6 +1,6 @@
 ﻿namespace ScoreTracking
 {
-    partial class frmSelecao
+    partial class frm_Selecao
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSelecao));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Selecao));
             this.dataGridPartida = new System.Windows.Forms.DataGridView();
             this.bt_Ok = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +49,7 @@
             this.dataGridPartida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridPartida.Size = new System.Drawing.Size(620, 255);
             this.dataGridPartida.TabIndex = 0;
+            this.dataGridPartida.DoubleClick += new System.EventHandler(this.bt_Ok_Click);
             // 
             // bt_Ok
             // 
@@ -59,6 +60,7 @@
             this.bt_Ok.TabIndex = 1;
             this.bt_Ok.Text = "&OK";
             this.bt_Ok.UseVisualStyleBackColor = true;
+            this.bt_Ok.Click += new System.EventHandler(this.bt_Ok_Click);
             // 
             // label1
             // 
@@ -70,7 +72,7 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Selecione sua partida:";
             // 
-            // frmSelecao
+            // frm_Selecao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,7 +82,7 @@
             this.Controls.Add(this.dataGridPartida);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "frmSelecao";
+            this.Name = "frm_Selecao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seleção";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPartida)).EndInit();

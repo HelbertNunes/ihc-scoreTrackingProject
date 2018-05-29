@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace ScoreTracking
 {
-    public partial class frm_Notification : Form
+    public partial class frm_NotificationDel : Form
     {
-        public frm_Notification(string mensagem)
+        public frm_NotificationDel()
         {
             InitializeComponent();
-            ShowInTaskbar = false;
-            lb_message.Text = mensagem;
             timer_close.Start();
         }
 

@@ -233,6 +233,16 @@ namespace ScoreTracking.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_icon {
+            get {
+                object obj = ResourceManager.GetObject("delete_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Drogoz {
             get {
                 object obj = ResourceManager.GetObject("Drogoz", resourceCulture);
@@ -451,6 +461,16 @@ namespace ScoreTracking.Properties {
         internal static System.Drawing.Bitmap Moji {
             get {
                 object obj = ResourceManager.GetObject("Moji", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap New_file_icon {
+            get {
+                object obj = ResourceManager.GetObject("New_file_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

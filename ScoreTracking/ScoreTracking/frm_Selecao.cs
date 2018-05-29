@@ -12,17 +12,25 @@ using System.Windows.Forms;
 
 namespace ScoreTracking
 {
-    public partial class frmSelecao : Form
+    public partial class frm_Selecao : Form
     {
-        Action<Partida> retornaPartida;
+        Action<PartidaPaladins> retornaPartidaPaladins;
+        Action<PartidaHS> retornaPartidaHS;
         Form sender;
         private const string JSON_HS_PATH = @".\partidas_hs.json";
         private const string JSON_PALADINS_PATH = @".\partidas_paladins.json";
 
-        public frmSelecao(Action<Partida> retornaPartida, Form sender)
+        public frm_Selecao(Action<PartidaPaladins> retornaPartida, Form sender)
         {
             InitializeComponent();
-            this.retornaPartida = retornaPartida;
+            this.retornaPartidaPaladins = retornaPartida;
+            this.sender = sender;
+            RecuperaPartidas();
+        }
+        public frm_Selecao(Action<PartidaHS> retornaPartida, Form sender)
+        {
+            InitializeComponent();
+            this.retornaPartidaHS = retornaPartida;
             this.sender = sender;
             RecuperaPartidas();
         }
@@ -47,6 +55,21 @@ namespace ScoreTracking
                 dataGridPartida.DataSource = partidaPaladins;
             }             
         }
-      
+
+        private void bt_Ok_Click(object sender, EventArgs e)
+        {
+            if (this.sender.Name.Contains("HS"))
+            {
+                PartidaHS partida = (PartidaHS)dataGridPartida.SelectedRows[0].DataBoundItem;
+                retornaPartidaHS(partida);
+            }
+            else
+            {
+                PartidaPaladins partida = (PartidaPaladins)dataGridPartida.SelectedRows[0].DataBoundItem;
+                retornaPartidaPaladins(partida);
+            }
+
+            Close();
+        }
     }
 }

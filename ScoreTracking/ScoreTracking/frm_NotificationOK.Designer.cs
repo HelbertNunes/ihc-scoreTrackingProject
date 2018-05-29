@@ -1,6 +1,6 @@
 ﻿namespace ScoreTracking
 {
-    partial class frm_Notification
+    partial class frm_NotificationOK
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Notification));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_NotificationOK));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lb_message = new System.Windows.Forms.Label();
             this.timer_close = new System.Windows.Forms.Timer(this.components);
@@ -62,7 +62,7 @@
             this.timer_close.Interval = 1500;
             this.timer_close.Tick += new System.EventHandler(this.timer_close_Tick);
             // 
-            // frm_Notification
+            // frm_NotificationOK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -71,7 +71,8 @@
             this.Controls.Add(this.lb_message);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frm_Notification";
+            this.Name = "frm_NotificationOK";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Notification";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

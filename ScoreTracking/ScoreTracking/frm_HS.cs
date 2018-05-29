@@ -122,7 +122,7 @@ namespace ScoreTracking
 
             File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
 
-            Form alert = new frm_Notification("Salvo com sucesso");
+            Form alert = new frm_NotificationOK("Salvo com sucesso");
             alert.Show();
         }
 
@@ -132,14 +132,14 @@ namespace ScoreTracking
             formEstatistica.ShowDialog();
         }
 
-        public void PreenchePartida(Partida partida)
+        public void PreenchePartida(PartidaHS partida)
         {
 
         }
 
         private void vizualizarPartidaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frmSelecao = new frmSelecao(PreenchePartida, this);
+            Form frmSelecao = new frm_Selecao(PreenchePartida, this);
             frmSelecao.ShowDialog();
         }
     }

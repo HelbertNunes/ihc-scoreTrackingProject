@@ -30,5 +30,16 @@ namespace ScoreTracking
         public Champion_Paladins[] Time_Aliado { get; private set; }
         [JsonProperty]
         public Champion_Paladins[] Time_Inimigo { get; private set; }
+
+        public void Altera(Vencedor vencedor, Champion_Paladins champion, Champion_Paladins[] aliados, Champion_Paladins[] inimigos, int pontosAliado, int pontosInimigo, string mapa)
+        {
+            this.Ganhador = vencedor;
+            this.SeuHeroi = champion;
+            this.Time_Aliado = aliados;
+            this.Time_Inimigo = inimigos;
+            this.pontosAliado = pontosAliado;
+            this.pontosInimigo = pontosInimigo;
+            this.Mapa = mapa;
+        }
     }
 }
