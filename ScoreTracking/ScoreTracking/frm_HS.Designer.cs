@@ -44,9 +44,14 @@
             this.mn_menu = new System.Windows.Forms.MenuStrip();
             this.estatísticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vizualizarPartidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsAtalho = new System.Windows.Forms.ToolStrip();
+            this.novoStripButton = new System.Windows.Forms.ToolStripButton();
+            this.abrirToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.deleteStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_enemy)).BeginInit();
             this.mn_menu.SuspendLayout();
+            this.tsAtalho.SuspendLayout();
             this.SuspendLayout();
             // 
             // lb_ally
@@ -206,12 +211,54 @@
             this.vizualizarPartidaToolStripMenuItem.Text = "&Vizualizar Partida";
             this.vizualizarPartidaToolStripMenuItem.Click += new System.EventHandler(this.vizualizarPartidaToolStripMenuItem_Click);
             // 
+            // tsAtalho
+            // 
+            this.tsAtalho.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novoStripButton,
+            this.abrirToolStripButton,
+            this.deleteStripButton});
+            this.tsAtalho.Location = new System.Drawing.Point(0, 24);
+            this.tsAtalho.Name = "tsAtalho";
+            this.tsAtalho.Size = new System.Drawing.Size(891, 25);
+            this.tsAtalho.TabIndex = 30;
+            this.tsAtalho.Text = "toolStrip1";
+            // 
+            // novoStripButton
+            // 
+            this.novoStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.novoStripButton.Image = global::ScoreTracking.Properties.Resources.New_file_icon;
+            this.novoStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.novoStripButton.Name = "novoStripButton";
+            this.novoStripButton.Size = new System.Drawing.Size(23, 22);
+            this.novoStripButton.Text = "Novo";
+            // 
+            // abrirToolStripButton
+            // 
+            this.abrirToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.abrirToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("abrirToolStripButton.Image")));
+            this.abrirToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.abrirToolStripButton.Name = "abrirToolStripButton";
+            this.abrirToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.abrirToolStripButton.Text = "&Abrir";
+            // 
+            // deleteStripButton
+            // 
+            this.deleteStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.deleteStripButton.Image = global::ScoreTracking.Properties.Resources.delete_icon;
+            this.deleteStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.deleteStripButton.Name = "deleteStripButton";
+            this.deleteStripButton.Size = new System.Drawing.Size(23, 22);
+            this.deleteStripButton.Text = "Deleta";
+            this.deleteStripButton.Visible = false;
+            this.deleteStripButton.Click += new System.EventHandler(this.deletaStripButton_Click);
+            // 
             // frm_HS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ScoreTracking.Properties.Resources._900px_Battlefield___The_Grand_Tournament;
             this.ClientSize = new System.Drawing.Size(891, 538);
+            this.Controls.Add(this.tsAtalho);
             this.Controls.Add(this.bt_Salvar);
             this.Controls.Add(this.lb_enemy_hero);
             this.Controls.Add(this.lb_ally_hero);
@@ -236,6 +283,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_enemy)).EndInit();
             this.mn_menu.ResumeLayout(false);
             this.mn_menu.PerformLayout();
+            this.tsAtalho.ResumeLayout(false);
+            this.tsAtalho.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,5 +307,9 @@
         private System.Windows.Forms.MenuStrip mn_menu;
         private System.Windows.Forms.ToolStripMenuItem estatísticaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vizualizarPartidaToolStripMenuItem;
+        private System.Windows.Forms.ToolStrip tsAtalho;
+        private System.Windows.Forms.ToolStripButton novoStripButton;
+        private System.Windows.Forms.ToolStripButton abrirToolStripButton;
+        private System.Windows.Forms.ToolStripButton deleteStripButton;
     }
 }

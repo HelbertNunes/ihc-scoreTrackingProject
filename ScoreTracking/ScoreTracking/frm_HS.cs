@@ -18,6 +18,8 @@ namespace ScoreTracking
         private List<Champion_HS> champions = new List<Champion_HS>();
         private Control.ControlCollection form_Controls;
         private const string JSON_PATH = @".\partidas_hs.json";
+        private PartidaHS partida;
+        private List<PartidaPaladins> partidas;
         Form formMenu;        
 
         public frm_HS(Form form)
@@ -42,7 +44,9 @@ namespace ScoreTracking
             }
 
             LeArquivo(Properties.Resources.classes);
-            
+
+            deleteStripButton.Visible = false;
+
             form_Controls = this.Controls;
             List<ComboBox> comboBoxes = form_Controls.OfType<ComboBox>().ToList().Where(x => !x.Name.Contains("vencedor")).ToList();
             List<PictureBox> pictureBoxes = form_Controls.OfType<PictureBox>().ToList();            
@@ -79,7 +83,7 @@ namespace ScoreTracking
         {
             string[] infos;
 
-            foreach (var line in file.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries))
+            foreach (var line in file.Split(new string[] { "\n", "\r" }, StringSplitOptions.RemoveEmptyEntries)) 
             {
                 if (line.Contains(':'))
                 {
@@ -113,10 +117,17 @@ namespace ScoreTracking
         {
             Partida.Vencedor vencedor = (cb_vencedor.SelectedIndex == 0) ? Partida.Vencedor.Aliado : Partida.Vencedor.Inimigo;
             Champion_HS seu_heroi = (Champion_HS)cb_ally_hero.SelectedItem;
-
-            PartidaHS partida = new PartidaHS(vencedor, seu_heroi, DateTime.Now);
+            Champion_HS heroi_inimigo = (Champion_HS)cb_enemy_hero.SelectedItem;
 
             List<PartidaHS> partidas = LeJSON();
+
+            if (this.partida == null)
+                this.partida = new PartidaHS(vencedor, seu_heroi, heroi_inimigo, DateTime.Now);
+            else
+            {
+                partidas.Remove(partida);
+                this.partida.Altera(vencedor, seu_heroi, heroi_inimigo);
+            }
 
             partidas.Add(partida);
 
@@ -134,13 +145,30 @@ namespace ScoreTracking
 
         public void PreenchePartida(PartidaHS partida)
         {
+            this.partida = partida;
+            deleteStripButton.Visible = true;
 
+            List<ComboBox> comboBoxes_ally = form_Controls.OfType<ComboBox>().ToList().Where(x => x.Name.Contains("ally")).ToList();
+            List<ComboBox> comboBoxes_enemy = form_Controls.OfType<ComboBox>().ToList().Where(x => x.Name.Contains("enemy")).ToList();
+
+            cb_vencedor.SelectedIndex = (partida.Ganhador == Partida.Vencedor.Aliado) ? 0 : 1;
+            cb_ally_hero.SelectedIndex = champions.FindIndex(x => x.Nome == partida.SeuHeroi.Nome);
+            cb_enemy_hero.SelectedIndex = champions.FindIndex(x => x.Nome == partida.HeroiInimigo.Nome);
         }
 
         private void vizualizarPartidaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmSelecao = new frm_Selecao(PreenchePartida, this);
             frmSelecao.ShowDialog();
+        }
+
+        private void deletaStripButton_Click(object sender, EventArgs e)
+        {
+            partidas.RemoveAt(partidas.FindIndex(x => x.DataHora == partida.DataHora));
+            File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
+            PreencheComboBoxes();
+            frm_NotificationDel frmDel = new frm_NotificationDel();
+            frmDel.ShowDialog();
         }
     }
 }

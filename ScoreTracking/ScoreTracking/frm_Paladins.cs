@@ -39,6 +39,8 @@ namespace ScoreTracking
                 file.Close();
             }
 
+            deleteStripButton.Visible = false;
+
             LeArquivo(Properties.Resources.champions_paladins);
             LeArquivo(Properties.Resources.maps_paladins);
 
@@ -275,6 +277,8 @@ namespace ScoreTracking
             partidas.RemoveAt(partidas.FindIndex(x => x.DataHora == partida.DataHora));
             File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
             PreencheCampos();
+            frm_NotificationDel frmDel = new frm_NotificationDel();
+            frmDel.ShowDialog();
         }
     }
 }
