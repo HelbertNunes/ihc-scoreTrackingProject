@@ -240,6 +240,7 @@
             this.abrirToolStripButton.Name = "abrirToolStripButton";
             this.abrirToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.abrirToolStripButton.Text = "&Abrir";
+            this.abrirToolStripButton.Click += new System.EventHandler(this.vizualizarPartidaToolStripMenuItem_Click);
             // 
             // deleteStripButton
             // 

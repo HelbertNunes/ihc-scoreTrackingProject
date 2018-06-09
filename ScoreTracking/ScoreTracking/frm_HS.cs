@@ -171,7 +171,14 @@ namespace ScoreTracking
             else
                 File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
 
-            PreencheComboBoxes();
+            List<ComboBox> comboBoxes = form_Controls.OfType<ComboBox>().ToList().Where(x => !x.Name.Contains("vencedor")).ToList();
+            for (int i = 0; i < comboBoxes.Count; i++)
+            {
+                comboBoxes[i].SelectedIndex = 0;
+            }
+
+            deleteStripButton.Visible = false;
+
             frm_NotificationDel frmDel = new frm_NotificationDel();
             frmDel.ShowDialog();
         }
