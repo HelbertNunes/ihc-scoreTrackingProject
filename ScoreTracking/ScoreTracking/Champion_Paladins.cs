@@ -1,13 +1,5 @@
-﻿using System;
-using Newtonsoft.Json;
-using System.Collections.Generic;
-using System.Linq;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Resources;
-using System.Reflection;
-using System.IO;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ScoreTracking
 {
@@ -22,12 +14,12 @@ namespace ScoreTracking
         public override Bitmap GetImage()
         {
             ResourceManager rm = Properties.Resources.ResourceManager;            
-            return (rm.GetObject(this.Nome.Contains("'") ? this.Nome.Replace("'","_") : this.Nome )as Bitmap);
+            return (rm.GetObject(Nome.Contains("'") ? Nome.Replace("'","_") :Nome )as Bitmap);
         }
 
         public override string ToString()
         {
-            return this.Nome;
+            return Nome;
         }
     }
 }

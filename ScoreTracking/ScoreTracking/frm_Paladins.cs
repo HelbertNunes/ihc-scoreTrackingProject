@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.IO;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ScoreTracking
@@ -149,7 +146,7 @@ namespace ScoreTracking
             JsonConverter[] converters = { new ChampionConverter() };
 
             List<PartidaPaladins> partidas = JsonConvert.DeserializeObject<List<PartidaPaladins>>(File.ReadAllText(JSON_PATH), new JsonSerializerSettings() { Converters = converters });
-
+            
             if (partidas is null || partidas[0].Time_Aliado is null) partidas = new List<PartidaPaladins>();
 
             return partidas;
