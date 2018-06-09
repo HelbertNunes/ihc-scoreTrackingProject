@@ -1,21 +1,16 @@
-﻿using System;
-using Newtonsoft.Json;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Newtonsoft.Json;
 using System.Drawing;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ScoreTracking
 {
-    
+
     public abstract class Champion
     {
         protected Champion(string nome, string classe, string jogo)
         {
-            this.Jogo = jogo;
-            this.Nome = nome;
-            this.Classe = classe;
+            Jogo = jogo;
+            Nome = nome;
+            Classe = classe;
         }
 
         [JsonProperty]

@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using Newtonsoft.Json;
 using System.IO;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ScoreTracking
@@ -23,14 +17,14 @@ namespace ScoreTracking
         public frm_Selecao(Action<PartidaPaladins> retornaPartida, Form sender)
         {
             InitializeComponent();
-            this.retornaPartidaPaladins = retornaPartida;
+            retornaPartidaPaladins = retornaPartida;
             this.sender = sender;
             RecuperaPartidas();
         }
         public frm_Selecao(Action<PartidaHS> retornaPartida, Form sender)
         {
             InitializeComponent();
-            this.retornaPartidaHS = retornaPartida;
+            retornaPartidaHS = retornaPartida;
             this.sender = sender;
             RecuperaPartidas();
         }
