@@ -82,7 +82,8 @@ namespace ScoreTracking
             cb_mapa.DataSource = mapas.OrderBy(x => x).ToList();
             pb_mapa.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject((cb_mapa.SelectedItem as string).ToLower().Replace(" ", "_"));
 
-            seu_heroi = (Champion_Paladins)comboBoxes.Where(x => x.Name.Contains("ally1")).ToList()[0].SelectedItem;            
+            seu_heroi = (Champion_Paladins)comboBoxes.Where(x => x.Name.Contains("ally1")).ToList()[0].SelectedItem;
+            partida = null;
         }
 
         private void SelecionaHeroi(object sender, EventArgs e)
@@ -201,6 +202,8 @@ namespace ScoreTracking
 
             File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
 
+            deleteStripButton.Visible = true;
+
             Form alert = new frm_NotificationOK("Salvo com sucesso");
             alert.ShowDialog();
         }
@@ -275,8 +278,16 @@ namespace ScoreTracking
         private void deleteStripButton_Click(object sender, EventArgs e)
         {
             partidas.RemoveAt(partidas.FindIndex(x => x.DataHora == partida.DataHora));
-            File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
+            if (partidas.Count == 0)
+                File.WriteAllText(JSON_PATH,string.Empty);
+            else
+                File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
+
             PreencheCampos();
+
+            mtxb_ally_points.Text = "";
+            mtxb_enemy_points.Text = "";
+
             frm_NotificationDel frmDel = new frm_NotificationDel();
             frmDel.ShowDialog();
         }

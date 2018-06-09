@@ -19,7 +19,7 @@ namespace ScoreTracking
         private Control.ControlCollection form_Controls;
         private const string JSON_PATH = @".\partidas_hs.json";
         private PartidaHS partida;
-        private List<PartidaPaladins> partidas;
+        private List<PartidaHS> partidas;
         Form formMenu;        
 
         public frm_HS(Form form)
@@ -49,13 +49,15 @@ namespace ScoreTracking
 
             form_Controls = this.Controls;
             List<ComboBox> comboBoxes = form_Controls.OfType<ComboBox>().ToList().Where(x => !x.Name.Contains("vencedor")).ToList();
-            List<PictureBox> pictureBoxes = form_Controls.OfType<PictureBox>().ToList();            
+            List<PictureBox> pictureBoxes = form_Controls.OfType<PictureBox>().ToList();
+
+            champions = champions.OrderBy(x => x.Nome).ToList<Champion_HS>();
 
             for (int i = 0; i < comboBoxes.Count; i++)
             {
                 Champion_HS[] championsTemp = new Champion_HS[champions.Count];
-                champions.OrderBy(x => x.Nome).ToList().CopyTo(championsTemp);
-                
+                champions.CopyTo(championsTemp);
+
                 comboBoxes[i].DataSource = championsTemp;
                 comboBoxes[i].DisplayMember = "Nome";
                 comboBoxes[i].SelectedIndexChanged += new EventHandler(AtualizaDados);
@@ -67,6 +69,7 @@ namespace ScoreTracking
 
             ComboBox comboVencedor = form_Controls.OfType<ComboBox>().ToList().Where(x => x.Name.Contains("vencedor")).ToList()[0];
             comboVencedor.SelectedIndex = 0;
+            partida = null;
         }
 
         private void AtualizaDados(object sender, EventArgs e)
@@ -106,7 +109,7 @@ namespace ScoreTracking
         private List<PartidaHS> LeJSON()
         {
             JsonConverter[] converters = { new ChampionConverter() };
-            List<PartidaHS> partidas = JsonConvert.DeserializeObject<List<PartidaHS>>(File.ReadAllText(JSON_PATH), new JsonSerializerSettings() { Converters = converters });
+            partidas = JsonConvert.DeserializeObject<List<PartidaHS>>(File.ReadAllText(JSON_PATH), new JsonSerializerSettings() { Converters = converters });
 
             if (partidas is null || partidas[0].SeuHeroi is null) partidas = new List<PartidaHS>();
 
@@ -132,6 +135,8 @@ namespace ScoreTracking
             partidas.Add(partida);
 
             File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
+
+            deleteStripButton.Visible = true;
 
             Form alert = new frm_NotificationOK("Salvo com sucesso");
             alert.Show();
@@ -166,6 +171,11 @@ namespace ScoreTracking
         {
             partidas.RemoveAt(partidas.FindIndex(x => x.DataHora == partida.DataHora));
             File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
+            if (partidas.Count == 0)
+                File.WriteAllText(JSON_PATH, string.Empty);
+            else
+                File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
+
             PreencheComboBoxes();
             frm_NotificationDel frmDel = new frm_NotificationDel();
             frmDel.ShowDialog();
