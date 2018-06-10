@@ -274,38 +274,42 @@ namespace ScoreTracking
 
         private void deleteStripButton_Click(object sender, EventArgs e)
         {
-            partidas.RemoveAt(partidas.FindIndex(x => x.DataHora == partida.DataHora));
-            if (partidas.Count == 0)
-                File.WriteAllText(JSON_PATH,string.Empty);
-            else
-                File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
-
-            List<ComboBox> comboBoxes = form_Controls.OfType<ComboBox>().ToList().Where(x => !x.Name.Contains("mapa")).ToList();
-
-            int cont_ally = 0, cont_enemy = 0;
-
-            for (int i = 0; i < comboBoxes.Count; i++)
+            DialogResult result = MessageBox.Show("Deseja realmente deletar a partida?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (result == DialogResult.Yes)
             {
-                if (comboBoxes[i].Name.Contains("ally"))
-                {
-                    comboBoxes[i].SelectedIndex = cont_ally;
-                    cont_ally++;
-                }
+                partidas.RemoveAt(partidas.FindIndex(x => x.DataHora == partida.DataHora));
+                if (partidas.Count == 0)
+                    File.WriteAllText(JSON_PATH, string.Empty);
                 else
+                    File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
+
+                List<ComboBox> comboBoxes = form_Controls.OfType<ComboBox>().ToList().Where(x => !x.Name.Contains("mapa")).ToList();
+
+                int cont_ally = 0, cont_enemy = 0;
+
+                for (int i = 0; i < comboBoxes.Count; i++)
                 {
-                    comboBoxes[i].SelectedIndex = cont_enemy;
-                    cont_enemy++;
+                    if (comboBoxes[i].Name.Contains("ally"))
+                    {
+                        comboBoxes[i].SelectedIndex = cont_ally;
+                        cont_ally++;
+                    }
+                    else
+                    {
+                        comboBoxes[i].SelectedIndex = cont_enemy;
+                        cont_enemy++;
+                    }
+
                 }
 
+                cb_mapa.SelectedIndex = 0;
+
+                mtxb_ally_points.Text = "";
+                mtxb_enemy_points.Text = "";
+
+                frm_NotificationDel frmDel = new frm_NotificationDel();
+                frmDel.ShowDialog();
             }
-
-            cb_mapa.SelectedIndex = 0;
-
-            mtxb_ally_points.Text = "";
-            mtxb_enemy_points.Text = "";
-
-            frm_NotificationDel frmDel = new frm_NotificationDel();
-            frmDel.ShowDialog();
         }
     }
 }

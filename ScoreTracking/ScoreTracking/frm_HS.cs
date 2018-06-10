@@ -164,23 +164,27 @@ namespace ScoreTracking
 
         private void deletaStripButton_Click(object sender, EventArgs e)
         {
-            partidas.RemoveAt(partidas.FindIndex(x => x.DataHora == partida.DataHora));
-            File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
-            if (partidas.Count == 0)
-                File.WriteAllText(JSON_PATH, string.Empty);
-            else
-                File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
-
-            List<ComboBox> comboBoxes = form_Controls.OfType<ComboBox>().ToList().Where(x => !x.Name.Contains("vencedor")).ToList();
-            for (int i = 0; i < comboBoxes.Count; i++)
+            DialogResult result = MessageBox.Show("Deseja realmente deletar a partida?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (result == DialogResult.Yes)
             {
-                comboBoxes[i].SelectedIndex = 0;
+                partidas.RemoveAt(partidas.FindIndex(x => x.DataHora == partida.DataHora));
+                File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
+                if (partidas.Count == 0)
+                    File.WriteAllText(JSON_PATH, string.Empty);
+                else
+                    File.WriteAllText(JSON_PATH, JsonConvert.SerializeObject(partidas));
+
+                List<ComboBox> comboBoxes = form_Controls.OfType<ComboBox>().ToList().Where(x => !x.Name.Contains("vencedor")).ToList();
+                for (int i = 0; i < comboBoxes.Count; i++)
+                {
+                    comboBoxes[i].SelectedIndex = 0;
+                }
+
+                deleteStripButton.Visible = false;
+
+                frm_NotificationDel frmDel = new frm_NotificationDel();
+                frmDel.ShowDialog();
             }
-
-            deleteStripButton.Visible = false;
-
-            frm_NotificationDel frmDel = new frm_NotificationDel();
-            frmDel.ShowDialog();
         }
     }
 }
