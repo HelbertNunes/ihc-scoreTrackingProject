@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace ScoreTracking
 {
@@ -53,6 +54,8 @@ namespace ScoreTracking
                 Champion_HS[] championsTemp = new Champion_HS[champions.Count];
                 champions.CopyTo(championsTemp);
 
+                comboBoxes[i].DataSource = null;
+                comboBoxes[i].Items.Clear();
                 comboBoxes[i].DataSource = championsTemp;
                 comboBoxes[i].DisplayMember = "Nome";
                 comboBoxes[i].SelectedIndexChanged += new EventHandler(AtualizaDados);
@@ -65,6 +68,8 @@ namespace ScoreTracking
             ComboBox comboVencedor = form_Controls.OfType<ComboBox>().ToList().Where(x => x.Name.Contains("vencedor")).ToList()[0];
             comboVencedor.SelectedIndex = 0;
             partida = null;
+
+            this.partidas = LeJSON();
         }
 
         private void AtualizaDados(object sender, EventArgs e)
@@ -104,7 +109,7 @@ namespace ScoreTracking
         private List<PartidaHS> LeJSON()
         {
             JsonConverter[] converters = { new ChampionConverter() };
-            partidas = JsonConvert.DeserializeObject<List<PartidaHS>>(File.ReadAllText(JSON_PATH), new JsonSerializerSettings() { Converters = converters });
+            List<PartidaHS> partidas = JsonConvert.DeserializeObject<List<PartidaHS>>(File.ReadAllText(JSON_PATH), new JsonSerializerSettings() { Converters = converters });
 
             if (partidas is null || partidas[0].SeuHeroi is null) partidas = new List<PartidaHS>();
 
@@ -117,13 +122,13 @@ namespace ScoreTracking
             Champion_HS seu_heroi = (Champion_HS)cb_ally_hero.SelectedItem;
             Champion_HS heroi_inimigo = (Champion_HS)cb_enemy_hero.SelectedItem;
 
-            List<PartidaHS> partidas = LeJSON();
+            this.partidas = LeJSON();
 
             if (this.partida == null)
                 this.partida = new PartidaHS(vencedor, seu_heroi, heroi_inimigo, DateTime.Now);
             else
-            {
-                partidas.Remove(partida);
+            {                
+                partidas.RemoveAt(partidas.FindIndex(x => x.DataHora == partida.DataHora));
                 this.partida.Altera(vencedor, seu_heroi, heroi_inimigo);
             }
 
@@ -185,6 +190,18 @@ namespace ScoreTracking
                 frm_NotificationDel frmDel = new frm_NotificationDel();
                 frmDel.ShowDialog();
             }
+        }
+
+        private void novoStripButton_Click(object sender, EventArgs e)
+        {
+            PreencheComboBoxes();
+            deleteStripButton.Visible = false;           
+            this.partida = null;
+        }
+
+        private void ajudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/HelbertNunes/ihc-scoreTrackingProject/blob/master/README.md");
         }
     }
 }

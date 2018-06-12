@@ -79,6 +79,7 @@
             this.novoStripButton = new System.Windows.Forms.ToolStripButton();
             this.abrirToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.deleteStripButton = new System.Windows.Forms.ToolStripButton();
+            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally3)).BeginInit();
@@ -477,7 +478,8 @@
             // 
             this.mn_menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.estatísticaToolStripMenuItem,
-            this.visualizarPartidaToolStripMenuItem});
+            this.visualizarPartidaToolStripMenuItem,
+            this.ajudaToolStripMenuItem});
             this.mn_menu.Location = new System.Drawing.Point(0, 0);
             this.mn_menu.Name = "mn_menu";
             this.mn_menu.Size = new System.Drawing.Size(942, 24);
@@ -569,6 +571,13 @@
             this.deleteStripButton.ToolTipText = "Deleta";
             this.deleteStripButton.Visible = false;
             this.deleteStripButton.Click += new System.EventHandler(this.deleteStripButton_Click);
+            // 
+            // ajudaToolStripMenuItem
+            // 
+            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
+            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.ajudaToolStripMenuItem.Text = "&Ajuda";
+            this.ajudaToolStripMenuItem.Click += new System.EventHandler(this.ajudaToolStripMenuItem_Click);
             // 
             // frm_Paladins
             // 
@@ -699,5 +708,6 @@
         private System.Windows.Forms.ToolStripButton novoStripButton;
         private System.Windows.Forms.ToolStripButton abrirToolStripButton;
         private System.Windows.Forms.ToolStripButton deleteStripButton;
+        private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
     }
 }

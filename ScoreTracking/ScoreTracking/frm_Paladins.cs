@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace ScoreTracking
 {
@@ -310,6 +311,11 @@ namespace ScoreTracking
                 frm_NotificationDel frmDel = new frm_NotificationDel();
                 frmDel.ShowDialog();
             }
+        }
+
+        private void ajudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/HelbertNunes/ihc-scoreTrackingProject/blob/master/README.md");
         }
     }
 }

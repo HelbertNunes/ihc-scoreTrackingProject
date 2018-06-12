@@ -48,6 +48,7 @@
             this.novoStripButton = new System.Windows.Forms.ToolStripButton();
             this.abrirToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.deleteStripButton = new System.Windows.Forms.ToolStripButton();
+            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ally)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_enemy)).BeginInit();
             this.mn_menu.SuspendLayout();
@@ -190,7 +191,8 @@
             // 
             this.mn_menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.estatísticaToolStripMenuItem,
-            this.vizualizarPartidaToolStripMenuItem});
+            this.vizualizarPartidaToolStripMenuItem,
+            this.ajudaToolStripMenuItem});
             this.mn_menu.Location = new System.Drawing.Point(0, 0);
             this.mn_menu.Name = "mn_menu";
             this.mn_menu.Size = new System.Drawing.Size(891, 24);
@@ -231,6 +233,7 @@
             this.novoStripButton.Name = "novoStripButton";
             this.novoStripButton.Size = new System.Drawing.Size(23, 22);
             this.novoStripButton.Text = "Novo";
+            this.novoStripButton.Click += new System.EventHandler(this.novoStripButton_Click);
             // 
             // abrirToolStripButton
             // 
@@ -252,6 +255,13 @@
             this.deleteStripButton.Text = "Deleta";
             this.deleteStripButton.Visible = false;
             this.deleteStripButton.Click += new System.EventHandler(this.deletaStripButton_Click);
+            // 
+            // ajudaToolStripMenuItem
+            // 
+            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
+            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.ajudaToolStripMenuItem.Text = "&Ajuda";
+            this.ajudaToolStripMenuItem.Click += new System.EventHandler(this.ajudaToolStripMenuItem_Click);
             // 
             // frm_HS
             // 
@@ -312,5 +322,6 @@
         private System.Windows.Forms.ToolStripButton novoStripButton;
         private System.Windows.Forms.ToolStripButton abrirToolStripButton;
         private System.Windows.Forms.ToolStripButton deleteStripButton;
+        private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
     }
 }
